@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowUp Hub — Elevate Your Lifestyle</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<base target="_blank">
+</head>
+<body>
+    <div id="glowup-preloader" class="glowup-preloader">
+        <div class="preloader-glass-plate">
+            <div class="particles-container">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+                <div class="particle particle-7"></div>
+                <div class="particle particle-8"></div>
+                <div class="particle particle-9"></div>
+                <div class="particle particle-10"></div>
+                <div class="particle particle-11"></div>
+                <div class="particle particle-12"></div>
+            </div>
+            <div class="orb-container">
+                <div class="orb-aura orb-aura-1"></div>
+                <div class="orb-aura orb-aura-2"></div>
+                <div class="orb-aura orb-aura-3"></div>
+                <div class="orb-core">
+                    <div class="orb-inner">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="preloader-text">
+                <span class="text-line">Loading your glow</span>
+                <span class="text-dots">
+                    <span class="preloader-dot">.</span>
+                    <span class="preloader-dot">.</span>
+                    <span class="preloader-dot">.</span>
+                </span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="preloaderProgress"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="logo-text">GlowUp Hub</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="explore.html" class="nav-link" target="_self">Explore</a>
+                <a href="community.html" class="nav-link" target="_self">Community</a>
+                <a href="login.html" class="nav-link nav-login" target="_blank">Login</a>
+                <a href="signup.html" class="btn btn-primary btn-small" target="_blank">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Join 2M+ women transforming their lives</span>
+                </div>
+                <h1 class="hero-title">
+                    Your Glow-Up<br>
+                    <span class="gradient-text">Starts Here</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The premium social network where ambitious women connect, create vision boards, 
+                    journal their moods, and build the lifestyle they deserve. No filters. Just real growth.
+                </p>
+                <div class="hero-buttons">
+                    <a href="signup.html" class="btn btn-primary btn-large">
+                        <i class="fa-solid fa-rocket"></i>
+                        Start Your Journey
+                    </a>
+                    <a href="explore.html" class="btn btn-outline btn-large">
+                        <i class="fa-solid fa-play"></i>
+                        Explore the Hub
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2.4M+</span>
+                        <span class="stat-label">Glow Members</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">890K</span>
+                        <span class="stat-label">Vision Boards</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9★</span>
+                        <span class="stat-label">App Store Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=750&fit=crop&crop=face" 
+                         alt="Confident woman lifestyle" class="hero-main-image">
+                    <div class="image-glow"></div>
+                </div>
+                <!-- Floating Cards -->
+                <div class="float-card float-card-1">
+                    <div class="float-card-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" 
+                             alt="User" class="float-avatar">
+                        <div class="float-card-info">
+                            <span class="float-name">Sarah M.</span>
+                            <span class="float-action">just hit her goal! 🎉</span>
+                        </div>
+                    </div>
+                    <div class="float-card-body">
+                        <div class="float-metric">
+                            <span class="float-metric-value">30 Days</span>
+                            <span class="float-metric-label">Morning Routine Streak</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-card float-card-2">
+                    <div class="float-card-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="float-card-text">
+                        <span class="float-card-number">12.4K</span>
+                        <span class="float-card-desc">Likes on your vision board</span>
+                    </div>
+                </div>
+                <div class="float-card float-card-3">
+                    <div class="float-card-avatars">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="">
+                        <div class="avatar-more">+2.4K</div>
+                    </div>
+                    <span class="float-card-cta">Join the Glow Squad today</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="explore">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-eyebrow">Platform Features</span>
+                <h2 class="section-title">Tools Built for<br><span class="gradient-text">Your Transformation</span></h2>
+                <p class="section-subtitle">
+                    Every feature is designed with intention — to help you visualize, plan, and achieve 
+                    the lifestyle you've always dreamed of.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card feature-card-large">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="feature-title">Discover Fest<br>Smart Search</h3>
+                    <p class="feature-desc">
+                        Our AI-powered discovery engine learns your style, goals, and mood to curate 
+                        personalized content, products, and connections. From wellness routines to career 
+                        advice, find exactly what you need to glow up.
+                    </p>
+                    <div class="feature-tags">
+                        <span class="feature-tag">AI Curated</span>
+                        <span class="feature-tag">Personalized</span>
+                        <span class="feature-tag">Trending</span>
+                    </div>
+                    <div class="feature-preview">
+                        <div class="search-mockup">
+                            <div class="search-bar">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span>morning skincare routine for glow...</span>
+                            </div>
+                            <div class="search-results">
+                                <div class="result-item active">
+                                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=80&h=80&fit=crop" alt="">
+                                    <div class="result-info">
+                                        <span class="result-title">Glass Skin Routine</span>
+                                        <span class="result-meta">12.4K saves · 4.9★</span>
+                                    </div>
+                                </div>
+                                <div class="result-item">
+                                    <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=80&h=80&fit=crop" alt="">
+                                    <div class="result-info">
+                                        <span class="result-title">Vitamin C Guide</span>
+                                        <span class="result-meta">8.7K saves · 4.8★</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="feature-title">Vision Boards</h3>
+                    <p class="feature-desc">
+                        Create stunning digital vision boards with drag-and-drop simplicity. 
+                        Pull from millions of images, add affirmations, and watch your dreams manifest.
+                    </p>
+                    <div class="feature-visual">
+                        <div class="vision-preview">
+                            <div class="vision-img vision-img-1">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200&h=250&fit=crop" alt="">
+                            </div>
+                            <div class="vision-img vision-img-2">
+                                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=200&h=250&fit=crop" alt="">
+                            </div>
+                            <div class="vision-img vision-img-3">
+                                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=200&h=250&fit=crop" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="feature-title">Mood Journaling</h3>
+                    <p class="feature-desc">
+                        Track your emotional wellness with intelligent mood tracking. 
+                        Get insights, prompts, and celebrate every small win on your journey.
+                    </p>
+                    <div class="feature-visual">
+                        <div class="mood-tracker">
+                            <div class="mood-week">
+                                <div class="mood-day mood-happy"><i class="fa-solid fa-face-smile"></i></div>
+                                <div class="mood-day mood-calm"><i class="fa-solid fa-face-meh"></i></div>
+                                <div class="mood-day mood-excited"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                                <div class="mood-day mood-happy"><i class="fa-solid fa-face-smile"></i></div>
+                                <div class="mood-day mood-calm"><i class="fa-solid fa-face-meh"></i></div>
+                                <div class="mood-day mood-excited"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                                <div class="mood-day mood-happy active"><i class="fa-solid fa-face-smile"></i></div>
+                            </div>
+                            <div class="mood-streak">
+                                <i class="fa-solid fa-fire"></i>
+                                <span>7 day streak!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-wide">
+                    <div class="feature-card-glow"></div>
+                    <div class="feature-icon-wrap">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="feature-title">Private Glow Chats</h3>
+                    <p class="feature-desc">
+                        Connect with your inner circle in beautifully designed private spaces. 
+                        Share goals, celebrate wins, and hold each other accountable with end-to-end encryption.
+                    </p>
+                    <div class="feature-visual">
+                        <div class="chat-preview">
+                            <div class="chat-bubble chat-received">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="">
+                                <div class="bubble-text">Just finished my 5am workout! 💪</div>
+                            </div>
+                            <div class="chat-bubble chat-sent">
+                                <div class="bubble-text">You're absolutely crushing it girl! 🔥</div>
+                            </div>
+                            <div class="chat-bubble chat-received">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="">
+                                <div class="bubble-text">We should celebrate this weekend!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creators Section -->
+    <section class="creators" id="community">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-eyebrow">Top Glow Creators</span>
+                <h2 class="section-title">Women Who<br><span class="gradient-text">Inspire Millions</span></h2>
+                <p class="section-subtitle">
+                    Follow the trailblazers sharing their authentic glow-up journeys, 
+                    from fitness transformations to career pivots and everything in between.
+                </p>
+            </div>
+            <div class="creators-grid">
+                <div class="creator-card">
+                    <div class="creator-cover">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=200&fit=crop" alt="Cover">
+                    </div>
+                    <div class="creator-body">
+                        <div class="creator-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face" 
+                                 alt="Amara Chen" class="creator-avatar">
+                            <div class="creator-badge"><i class="fa-solid fa-crown"></i></div>
+                        </div>
+                        <h3 class="creator-name">Amara Chen</h3>
+                        <p class="creator-handle">@amaraglows</p>
+                        <p class="creator-bio">Wellness coach & manifestation queen. Helping 500K+ women build morning routines that change lives.</p>
+                        <div class="creator-stats">
+                            <div><span>542K</span> Followers</div>
+                            <div><span>1.2M</span> Likes</div>
+                        </div>
+                        <button class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-plus"></i> Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-cover">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=200&fit=crop" alt="Cover">
+                    </div>
+                    <div class="creator-body">
+                        <div class="creator-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" 
+                                 alt="Jasmine Brooks" class="creator-avatar">
+                            <div class="creator-badge verified"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <h3 class="creator-name">Jasmine Brooks</h3>
+                        <p class="creator-handle">@jazzylifestyle</p>
+                        <p class="creator-bio">Fashion entrepreneur & style curator. From thrift flips to luxury hauls — authenticity always.</p>
+                        <div class="creator-stats">
+                            <div><span>328K</span> Followers</div>
+                            <div><span>890K</span> Likes</div>
+                        </div>
+                        <button class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-plus"></i> Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-cover">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Cover">
+                    </div>
+                    <div class="creator-body">
+                        <div class="creator-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face" 
+                                 alt="Priya Sharma" class="creator-avatar">
+                            <div class="creator-badge verified"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <h3 class="creator-name">Priya Sharma</h3>
+                        <p class="creator-handle">@priyainpower</p>
+                        <p class="creator-bio">Tech exec turned mindset mentor. Proving you can have the career AND the peace.</p>
+                        <div class="creator-stats">
+                            <div><span>715K</span> Followers</div>
+                            <div><span>2.1M</span> Likes</div>
+                        </div>
+                        <button class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-plus"></i> Follow
+                        </button>
+                    </div>
+                </div>
+                <div class="creator-card">
+                    <div class="creator-cover">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=200&fit=crop" alt="Cover">
+                    </div>
+                    <div class="creator-body">
+                        <div class="creator-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face" 
+                                 alt="Zoe Martinez" class="creator-avatar">
+                            <div class="creator-badge"><i class="fa-solid fa-crown"></i></div>
+                        </div>
+                        <h3 class="creator-name">Zoe Martinez</h3>
+                        <p class="creator-handle">@zoeglowfit</p>
+                        <p class="creator-bio">Certified trainer & nutritionist. Transforming bodies and minds with science-backed methods.</p>
+                        <div class="creator-stats">
+                            <div><span>421K</span> Followers</div>
+                            <div><span>967K</span> Likes</div>
+                        </div>
+                        <button class="btn btn-primary btn-full">
+                            <i class="fa-solid fa-plus"></i> Follow
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masonry Gallery -->
+    <section class="gallery">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-eyebrow">Daily Inspiration</span>
+                <h2 class="section-title">Curated Lifestyle<br><span class="gradient-text">Mood Board</span></h2>
+                <p class="section-subtitle">
+                    Save, share, and get inspired by thousands of lifestyle moments from our community.
+                </p>
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-item masonry-item-tall">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=600&fit=crop" alt="Fashion">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-share-nodes"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@amaraglows</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop" alt="Wellness">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@jazzylifestyle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item masonry-item-wide">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=300&fit=crop" alt="Travel">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@priyainpower</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=300&fit=crop" alt="Skincare">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@zoeglowfit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item masonry-item-tall">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=600&fit=crop" alt="Fashion">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@amaraglows</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop" alt="Fitness">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@zoeglowfit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item masonry-item-wide">
+                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=300&fit=crop" alt="Beauty">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@jazzylifestyle</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop" alt="Mindfulness">
+                    <div class="masonry-overlay">
+                        <div class="masonry-actions">
+                            <button class="masonry-btn"><i class="fa-solid fa-heart"></i></button>
+                            <button class="masonry-btn"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                        <div class="masonry-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="">
+                            <span>@priyainpower</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-eyebrow">Success Stories</span>
+                <h2 class="section-title">Real Women,<br><span class="gradient-text">Real Glow-Ups</span></h2>
+            </div>
+            <div class="testimonials-carousel" id="testimonialCarousel">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "GlowUp Hub completely changed my morning routine. The vision board feature helped me 
+                            visualize my career goals, and within 6 months I landed my dream job. The community 
+                            here is unmatched — these women genuinely want to see you win."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="">
+                            <div class="author-info">
+                                <span class="author-name">Taylor Williams</span>
+                                <span class="author-title">Marketing Director · Glow Member 1.5 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "The mood journaling feature is a game-changer. I've struggled with anxiety for years, 
+                            and tracking my emotional patterns helped me identify triggers I never noticed before. 
+                            Plus, the Glow Chats feel like a safe space with my best friends."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="">
+                            <div class="author-info">
+                                <span class="author-name">Mia Johnson</span>
+                                <span class="author-title">Wellness Coach · Glow Member 2 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "I went from 200 followers to 50K in under a year thanks to the Discover Fest algorithm. 
+                            The platform actually promotes authentic content over perfection. I've built a business 
+                            and a sisterhood simultaneously."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="">
+                            <div class="author-info">
+                                <span class="author-name">Riley Park</span>
+                                <span class="author-title">Content Creator · Glow Member 1 yr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "As a busy mom of three, I needed something that fit into 15-minute windows. GlowUp Hub 
+                            delivers micro-content that actually matters. My self-care isn't selfish anymore — 
+                            it's scheduled, tracked, and celebrated."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="">
+                            <div class="author-info">
+                                <span class="author-name">Danielle Cruz</span>
+                                <span class="author-title">Entrepreneur · Glow Member 8 mos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" id="carouselPrev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="carousel-btn carousel-next" id="carouselNext">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-bg-shapes">
+            <div class="cta-shape cta-shape-1"></div>
+            <div class="cta-shape cta-shape-2"></div>
+        </div>
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Start<br>Your <span class="gradient-text">Glow-Up Era</span>?</h2>
+            <p class="cta-subtitle">
+                Join 2.4 million women who are already designing their dream lives. 
+                No credit card required. Your transformation starts with one click.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-white btn-large">
+                    <i class="fa-solid fa-rocket"></i>
+                    Create Free Account
+                </a>
+                <a href="#" class="btn btn-outline-white btn-large">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Demo
+                </a>
+            </div>
+            <div class="cta-trust">
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Bank-Level Security</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Private by Design</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-ban"></i>
+                    <span>No Ads, Ever</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                        <span class="logo-text">GlowUp Hub</span>
+                    </a>
+                    <p class="footer-tagline">
+                        The premium social network for women who refuse to settle. 
+                        Built with love in Los Angeles.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                        <!-- <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a> -->
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Discover Fest</a></li>
+                        <li><a href="#">Vision Boards</a></li>
+                        <li><a href="#">Mood Journal</a></li>
+                        <li><a href="#">Glow Chats</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Top Creators</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Events & Meetups</a></li>
+                        <li><a href="#">Ambassador Program</a></li>
+                        <li><a href="#">Brand Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-heading">Stay Glowing</h4>
+                    <p class="footer-newsletter-text">
+                        Get weekly glow-up tips, exclusive creator content, and early access to new features.
+                    </p>
+                    <form class="footer-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="your@email.com" class="footer-input">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 GlowUp Hub Inc. All rights reserved.</p>
+                <div class="footer-badges">
+                    <span class="footer-badge"><i class="fa-brands fa-apple"></i> iOS App</span>
+                    <span class="footer-badge"><i class="fa-brands fa-android"></i> Android App</span>
+                    <span class="footer-badge"><i class="fa-solid fa-globe"></i> Web Platform</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Sticky Navbar Background
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    mobileToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        });
+
+        // Testimonial Carousel
+        const track = document.getElementById('testimonialsTrack');
+        const cards = track.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+        let currentIndex = 0;
+        const totalCards = cards.length;
+
+        function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth + 32; // card width + gap
+            track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel();
+            });
+        });
+
+        // Auto-advance carousel
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateCarousel();
+        }, 5000);
+
+        // Intersection Observer for entrance animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .creator-card, .masonry-item, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Handle resize for carousel
+        window.addEventListener('resize', updateCarousel);
+    </script>
+    <script>
+        (function() {
+            'use strict';
+
+            const CONFIG = {
+                minDisplayTime: 1800,
+                progressInterval: 40,
+                fadeOutDuration: 800,
+                exitClassDelay: 200
+            };
+
+            let progress = 0;
+            let progressIntervalId = null;
+            let minTimerId = null;
+            let isReady = false;
+            let isMinTimeElapsed = false;
+
+            const preloader = document.getElementById('glowup-preloader');
+            const progressBar = document.getElementById('preloaderProgress');
+
+            function startProgress() {
+                progressIntervalId = setInterval(function() {
+                    const remaining = 100 - progress;
+                    const increment = Math.max(0.3, remaining * 0.015);
+                    progress = Math.min(100, progress + increment);
+
+                    if (progressBar) {
+                        progressBar.style.width = progress + '%';
+                    }
+
+                    if (progress >= 100) {
+                        clearInterval(progressIntervalId);
+                        checkReady();
+                    }
+                }, CONFIG.progressInterval);
+            }
+
+            function hidePreloader() {
+                if (!preloader) return;
+
+                preloader.classList.add('preloader-exiting');
+
+                setTimeout(function() {
+                    preloader.classList.add('preloader-hidden');
+
+                    setTimeout(function() {
+                        if (preloader && preloader.parentNode) {
+                            preloader.parentNode.removeChild(preloader);
+                        }
+                    }, CONFIG.fadeOutDuration + 100);
+                }, CONFIG.exitClassDelay);
+            }
+
+            function checkReady() {
+                if (isReady && isMinTimeElapsed && progress >= 100) {
+                    hidePreloader();
+                }
+            }
+
+            function onPageLoaded() {
+                isReady = true;
+                if (progressIntervalId) {
+                    clearInterval(progressIntervalId);
+                }
+                progress = 100;
+                if (progressBar) {
+                    progressBar.style.width = '100%';
+                }
+                checkReady();
+            }
+
+            function onMinTimeElapsed() {
+                isMinTimeElapsed = true;
+                checkReady();
+            }
+
+            function init() {
+                startProgress();
+                minTimerId = setTimeout(onMinTimeElapsed, CONFIG.minDisplayTime);
+
+                if (document.readyState === 'complete') {
+                    onPageLoaded();
+                } else {
+                    window.addEventListener('load', onPageLoaded);
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowUp Hub - Your Lifestyle Inspiration Community</title>
+    <meta name="description" content="Join GlowUp Hub - the premium lifestyle inspiration community for women. Discover beauty, fashion, wellness, and self-care content.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="../css/index2.css">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        <div class="mobile-menu-links">
+            <a href="#home">Home</a>
+            <a href="#explore">Explore</a>
+            <a href="#community">Community</a>
+            <a href="#features">Features</a>
+        </div>
+        <div class="mobile-menu-auth">
+            <a href="#" class="btn btn-login" style="width:100%;">Log In</a>
+            <a href="#" class="btn btn-primary" style="width:100%;">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-sparkles"></i></div>
+                GlowUp Hub
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#explore">Explore</a>
+                <a href="#community">Community</a>
+                <a href="#features">Features</a>
+            </div>
+
+            <div class="nav-auth">
+                <a href="#" class="btn btn-login">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-star" style="color: var(--gold-accent);"></i>
+                    Trusted by 50,000+ Glow Getters
+                </div>
+                <h1 class="hero-title">
+                    Elevate Your Lifestyle, <span>One Glow at a Time</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Join the most inspiring community of women who curate beauty, wellness, fashion, and self-care. Your daily dose of elegance starts here.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-heart"></i> Join the Glow Community
+                    </a>
+                    <a href="#explore" class="btn btn-outline">
+                        <i class="fas fa-compass"></i> Explore Inspirations
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?w=400&h=500&fit=crop" alt="Beauty skincare routine">
+                </div>
+                <div class="floating-card card-2">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=500&fit=crop" alt="Fashion lifestyle">
+                </div>
+                <div class="floating-card card-3">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=500&fit=crop" alt="Wellness spa">
+                </div>
+                <div class="floating-card card-4">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=500&fit=crop" alt="Makeup beauty">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="section-header reveal">
+            <span class="section-label">Why GlowUp Hub</span>
+            <h2 class="section-title">Curated Tools for Your Glow Journey</h2>
+            <p class="section-subtitle">Everything you need to discover, save, and share your favorite lifestyle inspirations in one beautiful space.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card reveal reveal-delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Discover Fest Smart Search</h3>
+                <p>AI-powered search that understands your aesthetic. Find exactly what inspires you across beauty, fashion, and wellness.</p>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="feature-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h3>Vision Boards Saving</h3>
+                <p>Create stunning mood boards and save your favorite finds. Organize your inspirations into beautiful collections.</p>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-3">
+                <div class="feature-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Mood Journaling</h3>
+                <p>Track your daily glow with elegant journaling tools. Reflect on your wellness journey with guided prompts.</p>
+            </div>
+
+            <div class="feature-card reveal reveal-delay-4">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Private Glow Chats</h3>
+                <p>Connect with your glow circle in secure, beautiful chat spaces. Share secrets, tips, and support privately.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TOP GLOW CREATORS -->
+    <section class="creators" id="community">
+        <div class="section-header reveal">
+            <span class="section-label">Top Creators</span>
+            <h2 class="section-title">Meet the Glow Creators</h2>
+            <p class="section-subtitle">The inspiring women shaping our community with their unique style and expertise.</p>
+        </div>
+
+        <div class="creators-grid">
+            <div class="creator-card reveal reveal-delay-1">
+                <div class="creator-image">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop" alt="Creator portrait">
+                    <div class="creator-overlay">
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <h3>Amara Chen</h3>
+                    <p class="role">Skincare Specialist</p>
+                    <div class="creator-stats">
+                        <div class="stat">
+                            <div class="stat-value">124K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">892</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creator-card reveal reveal-delay-2">
+                <div class="creator-image">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Creator portrait">
+                    <div class="creator-overlay">
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <h3>Sofia Laurent</h3>
+                    <p class="role">Fashion Curator</p>
+                    <div class="creator-stats">
+                        <div class="stat">
+                            <div class="stat-value">89K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">654</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creator-card reveal reveal-delay-3">
+                <div class="creator-image">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=500&fit=crop" alt="Creator portrait">
+                    <div class="creator-overlay">
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <h3>Mia Johnson</h3>
+                    <p class="role">Wellness Coach</p>
+                    <div class="creator-stats">
+                        <div class="stat">
+                            <div class="stat-value">156K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">1.2K</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creator-card reveal reveal-delay-4">
+                <div class="creator-image">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop" alt="Creator portrait">
+                    <div class="creator-overlay">
+                        <div class="creator-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="creator-info">
+                    <h3>Emma Rose</h3>
+                    <p class="role">Beauty Artist</p>
+                    <div class="creator-stats">
+                        <div class="stat">
+                            <div class="stat-value">203K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">1.5K</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LIFESTYLE MASONRY -->
+    <section class="masonry" id="explore">
+        <div class="section-header reveal">
+            <span class="section-label">Explore</span>
+            <h2 class="section-title">Lifestyle Inspirations</h2>
+            <p class="section-subtitle">A curated collection of beauty, fashion, wellness, and self-care moments from our community.</p>
+        </div>
+
+        <div class="masonry-grid">
+            <div class="masonry-item reveal">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=600&fit=crop" alt="Skincare routine">
+                <div class="masonry-overlay">
+                    <h4>Glass Skin Routine</h4>
+                    <div class="tags">
+                        <span class="tag">Skincare</span>
+                        <span class="tag">K-Beauty</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&h=500&fit=crop" alt="Fashion">
+                <div class="masonry-overlay">
+                    <h4>Spring Capsule Wardrobe</h4>
+                    <div class="tags">
+                        <span class="tag">Fashion</span>
+                        <span class="tag">Minimal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=700&fit=crop" alt="Spa wellness">
+                <div class="masonry-overlay">
+                    <h4>At-Home Spa Day</h4>
+                    <div class="tags">
+                        <span class="tag">Wellness</span>
+                        <span class="tag">Self-Care</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-3">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=450&fit=crop" alt="Makeup">
+                <div class="masonry-overlay">
+                    <h4>Soft Glam Tutorial</h4>
+                    <div class="tags">
+                        <span class="tag">Makeup</span>
+                        <span class="tag">Tutorial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=550&fit=crop" alt="Fitness">
+                <div class="masonry-overlay">
+                    <h4>Morning Yoga Flow</h4>
+                    <div class="tags">
+                        <span class="tag">Fitness</span>
+                        <span class="tag">Yoga</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=650&fit=crop" alt="Beauty products">
+                <div class="masonry-overlay">
+                    <h4>Clean Beauty Picks</h4>
+                    <div class="tags">
+                        <span class="tag">Beauty</span>
+                        <span class="tag">Clean</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=480&fit=crop" alt="Haircare">
+                <div class="masonry-overlay">
+                    <h4>Healthy Hair Guide</h4>
+                    <div class="tags">
+                        <span class="tag">Haircare</span>
+                        <span class="tag">Tips</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-3">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=580&fit=crop" alt="Lifestyle">
+                <div class="masonry-overlay">
+                    <h4>Morning Rituals</h4>
+                    <div class="tags">
+                        <span class="tag">Lifestyle</span>
+                        <span class="tag">Routine</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal">
+                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=520&fit=crop" alt="Nails">
+                <div class="masonry-overlay">
+                    <h4>Minimal Nail Art</h4>
+                    <div class="tags">
+                        <span class="tag">Nails</span>
+                        <span class="tag">Art</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-1">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=620&fit=crop" alt="Wellness">
+                <div class="masonry-overlay">
+                    <h4>Relaxation Corner</h4>
+                    <div class="tags">
+                        <span class="tag">Wellness</span>
+                        <span class="tag">Home</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-2">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?w=400&h=480&fit=crop" alt="Beauty">
+                <div class="masonry-overlay">
+                    <h4>Summer Glow</h4>
+                    <div class="tags">
+                        <span class="tag">Beauty</span>
+                        <span class="tag">Summer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="masonry-item reveal reveal-delay-3">
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=560&fit=crop" alt="Fashion">
+                <div class="masonry-overlay">
+                    <h4>Date Night Look</h4>
+                    <div class="tags">
+                        <span class="tag">Fashion</span>
+                        <span class="tag">Evening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="section-header reveal">
+            <span class="section-label">Testimonials</span>
+            <h2 class="section-title">What Our Glow Getters Say</h2>
+            <p class="section-subtitle">Real stories from real women who found their glow with us.</p>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-track" id="testimonialTrack">
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"GlowUp Hub completely transformed how I approach my daily routine. The vision boards helped me curate my aesthetic, and the community is incredibly supportive."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="User">
+                            <h4>Jessica Williams</h4>
+                            <span>Beauty Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"The smart search feature is a game changer. I can find exactly the skincare tips and fashion inspiration I need in seconds. It is like Pinterest but made just for me."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="User">
+                            <h4>Rachel Kim</h4>
+                            <span>Lifestyle Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"I love the private glow chats. Having a safe space to discuss wellness and self-care with like-minded women has been so empowering. This platform truly understands us."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop" alt="User">
+                            <h4>Olivia Martinez</h4>
+                            <span>Wellness Coach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"The mood journaling feature helped me track my mental wellness journey alongside my beauty routine. It is holistic self-care at its finest. Absolutely obsessed!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop" alt="User">
+                            <h4>Emily Thompson</h4>
+                            <span>Content Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-nav">
+                <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="testimonial-dots" id="testimonialDots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+                <button class="dot" data-index="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CTA BANNER -->
+    <section class="cta-banner">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Start Your Glow Journey?</h2>
+            <p class="cta-subtitle">Join thousands of women who are already curating their best lives. Your glow-up starts with a single click.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-sparkles"></i> Get Started Free
+                </a>
+                <a href="#" class="btn btn-outline">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <div class="logo-icon"><i class="fas fa-sparkles"></i></div>
+                    GlowUp Hub
+                </a>
+                <p>The premium lifestyle inspiration community for women who believe in the power of self-care, beauty, and personal growth.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Creators</a></li>
+                    <li><a href="#">Vision Boards</a></li>
+                    <li><a href="#">Mood Journal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>2026 GlowUp Hub. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMobileMenu() {
+            mobileMenu.style.display = 'block';
+            setTimeout(() => mobileMenu.classList.add('open'), 10);
+            mobileMenuOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+            setTimeout(() => mobileMenu.style.display = 'none', 400);
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Testimonial Slider
+        const track = document.getElementById('testimonialTrack');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        const totalSlides = 4;
+        let autoSlideInterval;
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentSlide = index;
+            track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                stopAutoSlide();
+                goToSlide(parseInt(dot.dataset.index));
+                startAutoSlide();
+            });
+        });
+
+        startAutoSlide();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        closeMobileMenu();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

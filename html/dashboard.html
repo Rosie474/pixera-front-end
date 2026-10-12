@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — GlowUp Hub</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="nav-logo-text">GlowUp Hub</span>
+            </a>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Discover Fest — Search fashion, wellness, mood boards...">
+                <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <div class="nav-notification-wrap">
+                    <button class="nav-action-btn" id="notifBtn" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notif-badge">5</span>
+                    </button>
+
+                    <div class="notif-dropdown" id="notifDropdown" role="dialog" aria-label="Notifications">
+                        <div class="notif-dropdown-header">
+                            <div>
+                                <span class="notif-title">Notifications</span>
+                                <span class="notif-count">5 New</span>
+                            </div>
+                            <button class="notif-clear-btn" type="button">Mark all read</button>
+                        </div>
+
+                        <div class="notif-dropdown-body">
+                            <div class="notif-section">
+                                <div class="notif-section-title">Today</div>
+
+                                <article class="notif-card unread">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face" alt="Sofia">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>Sofia Rae</span> liked your mood board and left a glowing note.</p>
+                                        <div class="notif-meta"><span>2m ago</span><span>•</span><span>Like</span></div>
+                                    </div>
+                                </article>
+
+                                <article class="notif-card unread">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&h=120&fit=crop&crop=face" alt="Mina">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>Mina J.</span> commented “Love this glow-up direction!” on your latest post.</p>
+                                        <div class="notif-meta"><span>12m ago</span><span>•</span><span>Comment</span></div>
+                                        <div class="notif-preview"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=240&fit=crop" alt="Post preview"></div>
+                                    </div>
+                                </article>
+
+                                <article class="notif-card">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=face" alt="Nova">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>Nova Glow</span> started following you and saved your Vision Board.</p>
+                                        <div class="notif-meta"><span>45m ago</span><span>•</span><span>Follow</span></div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="notif-section">
+                                <div class="notif-section-title">This Week</div>
+
+                                <article class="notif-card">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&h=120&fit=crop&crop=face" alt="Lena">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>Lena B.</span> sent you a new Glow Chat message about tonight’s event.</p>
+                                        <div class="notif-meta"><span>1d ago</span><span>•</span><span>Message</span></div>
+                                    </div>
+                                </article>
+
+                                <article class="notif-card">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face" alt="Trend">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>GlowUp Trending</span> your post is now featured in the trending feed.</p>
+                                        <div class="notif-meta"><span>2d ago</span><span>•</span><span>Trending</span></div>
+                                    </div>
+                                </article>
+
+                                <article class="notif-card">
+                                    <img class="notif-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&h=120&fit=crop&crop=face" alt="Milestone">
+                                    <div class="notif-content">
+                                        <p class="notif-text"><span>Glow Milestone</span> you hit 1k followers and unlocked premium profile shimmer.</p>
+                                        <div class="notif-meta"><span>4d ago</span><span>•</span><span>Milestone</span></div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="createpost2.html">
+                    <button class="nav-action-btn create-post-btn" id="createPostBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                   </button>
+                </a>
+                <div class="nav-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Profile" class="nav-avatar">
+                    <div class="profile-dropdown">
+                        <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="dashboard-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-inner">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link active" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-label">Home</span>
+                    </a>
+                    <a href="discover.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-label">Explore</span>
+                    </a>
+                    <a href="boards.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="sidebar-label">Boards</span>
+                    </a>
+                    <a href="messages.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-comment-dots"></i></span>
+                        <span class="sidebar-label">Messages</span>
+                        <span class="sidebar-badge">3</span>
+                    </a>
+                    <a href="profile.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-user"></i></span>
+                        <span class="sidebar-label">Profile</span>
+                    </a>
+                    <a href="settings.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="sidebar-label">Settings</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="mood-tracker-mini">
+                        <span class="mood-label">Today's Mood</span>
+                        <div class="mood-options">
+                            <button class="mood-btn mood-happy active" title="Happy"><i class="fa-solid fa-face-smile"></i></button>
+                            <button class="mood-btn mood-calm" title="Calm"><i class="fa-solid fa-face-meh"></i></button>
+                            <button class="mood-btn mood-excited" title="Excited"><i class="fa-solid fa-face-laugh-beam"></i></button>
+                            <button class="mood-btn mood-sad" title="Reflective"><i class="fa-solid fa-face-frown"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Feed -->
+        <main class="center-feed" id="centerFeed">
+            <!-- Feed Filter -->
+            <div class="feed-filter">
+                <button class="filter-btn active">For You</button>
+                <button class="filter-btn">Following</button>
+                <button class="filter-btn">Trending</button>
+                <button class="filter-btn">Near You</button>
+            </div>
+
+            <!-- Masonry Feed -->
+            <div class="masonry-feed" id="masonryFeed">
+                <!-- Card 1: Fashion Image -->
+                <article class="feed-card card-image">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Amara" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Amara Chen <i class="fa-solid fa-crown card-badge"></i></span>
+                            <span class="card-time">2h ago · Fashion</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop" alt="Fashion">
+                        <div class="card-media-overlay">
+                            <button class="media-action"><i class="fa-solid fa-heart"></i></button>
+                            <button class="media-action"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-caption">This season's must-have: oversized blazers in pastel tones. Paired mine with vintage gold hoops and a confidence boost. What's your power outfit? ✨ <span class="tag">#FashionGlow</span> <span class="tag">#OOTD</span></p>
+                        <div class="card-stats">
+                            <span><i class="fa-solid fa-heart"></i> 2.4K</span>
+                            <span><i class="fa-regular fa-comment"></i> 89</span>
+                            <span><i class="fa-solid fa-share-nodes"></i> 156</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2: Mood Journal -->
+                <article class="feed-card card-journal">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Jasmine" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Jasmine Brooks <i class="fa-solid fa-check card-badge verified"></i></span>
+                            <span class="card-time">4h ago · Mood Journal</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-journal-body">
+                        <div class="journal-mood">
+                            <span class="mood-emoji">🌸</span>
+                            <span class="mood-word">Grateful</span>
+                        </div>
+                        <div class="journal-entry">
+                            <p>Today I chose rest over hustle. I journaled for 20 minutes, did my skincare routine, and said no to a meeting that didn't serve my energy. Small wins compound. <span class="tag">#SelfCare</span> <span class="tag">#MoodCheck</span></p>
+                        </div>
+                        <div class="journal-streak">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>7 day journaling streak</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3: Beauty Tip -->
+                <article class="feed-card card-tip">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Zoe" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Zoe Martinez <i class="fa-solid fa-crown card-badge"></i></span>
+                            <span class="card-time">5h ago · Beauty Tip</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-tip-body">
+                        <div class="tip-badge">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Glow Tip</span>
+                        </div>
+                        <h3 class="tip-title">The 60-Second Ice Facial</h3>
+                        <p class="tip-content">Wrap ice cubes in a soft cloth and glide across your face in upward strokes for 60 seconds. Reduces puffiness, tightens pores, and gives an instant glow before makeup. I do this every morning!</p>
+                        <div class="tip-product">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=100&h=100&fit=crop" alt="Product">
+                            <div class="product-info">
+                                <span class="product-name">Ice Roller Pro</span>
+                                <span class="product-price">$24.99 · 4.9★</span>
+                            </div>
+                            <button class="product-btn">Shop</button>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 4: Anonymous Girl Talk -->
+                <article class="feed-card card-anon">
+                    <div class="card-header anon-header">
+                        <div class="anon-avatar">
+                            <i class="fa-solid fa-mask"></i>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-name">Anonymous Glow <i class="fa-solid fa-shield-halved card-badge anon-badge"></i></span>
+                            <span class="card-time">1h ago · Girl Talk</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-anon-body">
+                        <div class="anon-banner">
+                            <i class="fa-solid fa-user-secret"></i>
+                            <span>Posted anonymously in Girl Talk</span>
+                        </div>
+                        <p class="anon-text">I just got promoted to Senior Manager and I'm terrified I'm not qualified. Has anyone else felt imposter syndrome after a big win? How did you handle it? I don't want to talk about this on LinkedIn but I know this community gets it. 💜</p>
+                        <div class="anon-reactions">
+                            <span class="anon-reaction">💜 234</span>
+                            <span class="anon-reaction">🫂 189</span>
+                            <span class="anon-reaction">🔥 156</span>
+                            <span class="anon-reaction">✨ 98</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Support</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Reply</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 5: Fashion Image -->
+                <article class="feed-card card-image">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=80&h=80&fit=crop&crop=face" alt="Luna" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Luna Park <i class="fa-solid fa-check card-badge verified"></i></span>
+                            <span class="card-time">3h ago · Fashion</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=750&fit=crop" alt="Outfit">
+                        <div class="card-media-overlay">
+                            <button class="media-action"><i class="fa-solid fa-heart"></i></button>
+                            <button class="media-action"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-caption">Monochrome moment. Sometimes less really is more. This linen set has been my go-to for coffee runs and client meetings alike. <span class="tag">#Minimalist</span> <span class="tag">#StyleInspo</span></p>
+                        <div class="card-stats">
+                            <span><i class="fa-solid fa-heart"></i> 1.8K</span>
+                            <span><i class="fa-regular fa-comment"></i> 64</span>
+                            <span><i class="fa-solid fa-share-nodes"></i> 112</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6: Mood Journal -->
+                <article class="feed-card card-journal">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop&crop=face" alt="Maya" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Maya Torres</span>
+                            <span class="card-time">6h ago · Mood Journal</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-journal-body">
+                        <div class="journal-mood">
+                            <span class="mood-emoji">⚡</span>
+                            <span class="mood-word">Energized</span>
+                        </div>
+                        <div class="journal-entry">
+                            <p>5AM club member today! Woke up before my alarm, meditated, and crushed a HIIT session. The hardest part is always starting — everything after is momentum. Who else is chasing morning discipline? <span class="tag">#5AMClub</span> <span class="tag">#Discipline</span></p>
+                        </div>
+                        <div class="journal-streak">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>12 day fitness streak</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 7: Beauty Tip -->
+                <article class="feed-card card-tip">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Priya" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Priya Sharma <i class="fa-solid fa-check card-badge verified"></i></span>
+                            <span class="card-time">8h ago · Beauty Tip</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-tip-body">
+                        <div class="tip-badge">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Glow Tip</span>
+                        </div>
+                        <h3 class="tip-title">Double Cleansing 101</h3>
+                        <p class="tip-content">Oil cleanser first to break down SPF and makeup, then water-based cleanser to clean the skin. Game changer for preventing breakouts. I use this method every night and my skin has never been clearer.</p>
+                        <div class="tip-steps">
+                            <div class="tip-step"><span>1</span> Oil Cleanser</div>
+                            <div class="tip-step"><span>2</span> Foam Cleanser</div>
+                            <div class="tip-step"><span>3</span> Toner</div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 8: Anonymous Girl Talk -->
+                <article class="feed-card card-anon">
+                    <div class="card-header anon-header">
+                        <div class="anon-avatar">
+                            <i class="fa-solid fa-mask"></i>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-name">Anonymous Glow <i class="fa-solid fa-shield-halved card-badge anon-badge"></i></span>
+                            <span class="card-time">30m ago · Girl Talk</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-anon-body">
+                        <div class="anon-banner">
+                            <i class="fa-solid fa-user-secret"></i>
+                            <span>Posted anonymously in Girl Talk</span>
+                        </div>
+                        <p class="anon-text">My partner doesn't understand why I need alone time to recharge. How do you communicate your need for space without making someone feel rejected? I love them but I'm drowning in constant togetherness.</p>
+                        <div class="anon-reactions">
+                            <span class="anon-reaction">💜 412</span>
+                            <span class="anon-reaction">🫂 378</span>
+                            <span class="anon-reaction">✨ 201</span>
+                            <span class="anon-reaction">🙏 156</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Support</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Reply</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 9: Fashion Image -->
+                <article class="feed-card card-image">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Amara" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Amara Chen <i class="fa-solid fa-crown card-badge"></i></span>
+                            <span class="card-time">1d ago · Fashion</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=800&fit=crop" alt="Fashion">
+                        <div class="card-media-overlay">
+                            <button class="media-action"><i class="fa-solid fa-heart"></i></button>
+                            <button class="media-action"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-caption">Weekend market finds. This vintage silk scarf was $12 and it elevates every basic outfit I own. Thrifting is an art form. <span class="tag">#ThriftFlip</span> <span class="tag">#SustainableFashion</span></p>
+                        <div class="card-stats">
+                            <span><i class="fa-solid fa-heart"></i> 3.1K</span>
+                            <span><i class="fa-regular fa-comment"></i> 124</span>
+                            <span><i class="fa-solid fa-share-nodes"></i> 267</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 10: Mood Journal -->
+                <article class="feed-card card-journal">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Zoe" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Zoe Martinez <i class="fa-solid fa-crown card-badge"></i></span>
+                            <span class="card-time">12h ago · Mood Journal</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-journal-body">
+                        <div class="journal-mood">
+                            <span class="mood-emoji">🌙</span>
+                            <span class="mood-word">Reflective</span>
+                        </div>
+                        <div class="journal-entry">
+                            <p>Deleted Instagram from my phone for 48 hours and my anxiety dropped by half. Not saying social media is bad — but boundaries are everything. Curating my feed to only follow accounts that genuinely inspire me has been a game changer. <span class="tag">#DigitalWellness</span> <span class="tag">#Boundaries</span></p>
+                        </div>
+                        <div class="journal-streak">
+                            <i class="fa-solid fa-fire"></i>
+                            <span>21 day mindfulness streak</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 11: Fashion Image -->
+                <article class="feed-card card-image">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Jasmine" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Jasmine Brooks <i class="fa-solid fa-check card-badge verified"></i></span>
+                            <span class="card-time">5h ago · Fashion</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&h=700&fit=crop" alt="Skincare">
+                        <div class="card-media-overlay">
+                            <button class="media-action"><i class="fa-solid fa-heart"></i></button>
+                            <button class="media-action"><i class="fa-solid fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-caption">Glass skin routine breakdown coming to my boards tomorrow. Here's a preview: hydration layers are everything. <span class="tag">#Skincare</span> <span class="tag">#GlassSkin</span></p>
+                        <div class="card-stats">
+                            <span><i class="fa-solid fa-heart"></i> 4.2K</span>
+                            <span><i class="fa-regular fa-comment"></i> 201</span>
+                            <span><i class="fa-solid fa-share-nodes"></i> 445</span>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 12: Beauty Tip -->
+                <article class="feed-card card-tip">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=80&h=80&fit=crop&crop=face" alt="Luna" class="card-avatar">
+                        <div class="card-meta">
+                            <span class="card-name">Luna Park <i class="fa-solid fa-check card-badge verified"></i></span>
+                            <span class="card-time">10h ago · Beauty Tip</span>
+                        </div>
+                        <button class="card-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                    <div class="card-tip-body">
+                        <div class="tip-badge">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Glow Tip</span>
+                        </div>
+                        <h3 class="tip-title">The 3-Minute Brow</h3>
+                        <p class="tip-content">Spoolie, tinted brow gel, and a clear wax. Three products, three minutes, frame-your-face brows that last all day. Stop overplucking — full brows are in and they're not going anywhere.</p>
+                        <div class="tip-product">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?w=100&h=100&fit=crop" alt="Product">
+                            <div class="product-info">
+                                <span class="product-name">Brow Fix Gel</span>
+                                <span class="product-price">$18.00 · 4.8★</span>
+                            </div>
+                            <button class="product-btn">Shop</button>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn" data-liked="false">
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Like</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-comment"></i>
+                            <span>Comment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <span>Save</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fa-solid fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-wrap">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <span class="load-text">Load More Glow</span>
+                    <span class="load-spinner">
+                        <svg class="spinner-svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4 31.4" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar" id="rightSidebar">
+            <div class="sidebar-inner">
+                <!-- Trending Tags -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        Trending Now
+                    </h3>
+                    <div class="trending-tags">
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#GlowUp2026</span>
+                            <span class="tag-count">24.5K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#MorningRoutine</span>
+                            <span class="tag-count">18.2K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#SelfCareSunday</span>
+                            <span class="tag-count">15.8K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#VisionBoard</span>
+                            <span class="tag-count">12.1K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#GirlTalk</span>
+                            <span class="tag-count">9.7K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#ThriftFlip</span>
+                            <span class="tag-count">8.3K posts</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Top Creators -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-crown"></i>
+                        Top Glow Creators
+                    </h3>
+                    <div class="creator-list">
+                        <div class="creator-item">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Amara" class="creator-avatar">
+                            <div class="creator-info">
+                                <span class="creator-name">Amara Chen</span>
+                                <span class="creator-handle">@amaraglows</span>
+                            </div>
+                            <button class="creator-follow">Follow</button>
+                        </div>
+                        <div class="creator-item">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Jasmine" class="creator-avatar">
+                            <div class="creator-info">
+                                <span class="creator-name">Jasmine Brooks</span>
+                                <span class="creator-handle">@jazzylifestyle</span>
+                            </div>
+                            <button class="creator-follow">Follow</button>
+                        </div>
+                        <div class="creator-item">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Priya" class="creator-avatar">
+                            <div class="creator-info">
+                                <span class="creator-name">Priya Sharma</span>
+                                <span class="creator-handle">@priyainpower</span>
+                            </div>
+                            <button class="creator-follow">Follow</button>
+                        </div>
+                        <div class="creator-item">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Zoe" class="creator-avatar">
+                            <div class="creator-info">
+                                <span class="creator-name">Zoe Martinez</span>
+                                <span class="creator-handle">@zoeglowfit</span>
+                            </div>
+                            <button class="creator-follow">Follow</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Affirmation -->
+                <div class="sidebar-card affirmation-card">
+                    <div class="affirmation-glow"></div>
+                    <div class="affirmation-content">
+                        <div class="affirmation-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="affirmation-text">You are allowed to be both a masterpiece and a work in progress simultaneously.</p>
+                        <div class="affirmation-footer">
+                            <span class="affirmation-date">Today's Affirmation</span>
+                            <button class="affirmation-save" id="affirmationSave">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suggested Boards -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-palette"></i>
+                        Boards to Explore
+                    </h3>
+                    <div class="board-suggestions">
+                        <a href="#" class="board-suggestion">
+                            <div class="board-thumb">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200&h=200&fit=crop" alt="">
+                            </div>
+                            <div class="board-suggestion-info">
+                                <span class="board-suggestion-name">Spring Capsule</span>
+                                <span class="board-suggestion-count">1.2K pins</span>
+                            </div>
+                        </a>
+                        <a href="#" class="board-suggestion">
+                            <div class="board-thumb">
+                                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=200&h=200&fit=crop" alt="">
+                            </div>
+                            <div class="board-suggestion-info">
+                                <span class="board-suggestion-name">Glass Skin Routine</span>
+                                <span class="board-suggestion-count">890 pins</span>
+                            </div>
+                        </a>
+                        <a href="#" class="board-suggestion">
+                            <div class="board-thumb">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=200&h=200&fit=crop" alt="">
+                            </div>
+                            <div class="board-suggestion-info">
+                                <span class="board-suggestion-name">Morning Rituals</span>
+                                <span class="board-suggestion-count">2.4K pins</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="#" class="mobile-nav-link active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <button class="mobile-create-btn" id="mobileCreateBtn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Chat</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const leftSidebar = document.getElementById('leftSidebar');
+        const topNavbar = document.getElementById('topNavbar');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            leftSidebar.classList.toggle('mobile-open');
+            mobileMenuToggle.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (leftSidebar.classList.contains('mobile-open') && 
+                !leftSidebar.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                leftSidebar.classList.remove('mobile-open');
+                mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+
+        // Like button interactions
+        document.querySelectorAll('.like-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const isLiked = this.dataset.liked === 'true';
+                const icon = this.querySelector('i');
+                const countEl = this.closest('.feed-card').querySelector('.card-stats span:first-child');
+
+                if (isLiked) {
+                    this.dataset.liked = 'false';
+                    icon.classList.remove('fa-solid');
+                    icon.classList.add('fa-regular');
+                    this.style.color = '';
+                    this.style.background = '';
+                } else {
+                    this.dataset.liked = 'true';
+                    icon.classList.remove('fa-regular');
+                    icon.classList.add('fa-solid');
+                    this.style.color = 'var(--electric-pink)';
+                    this.style.background = 'rgba(255, 45, 146, 0.08)';
+
+                    // Heart pop animation
+                    icon.style.transform = 'scale(1.4)';
+                    setTimeout(() => icon.style.transform = 'scale(1)', 200);
+                }
+            });
+        });
+
+        // Media overlay actions
+        document.querySelectorAll('.media-action').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-heart')) {
+                    icon.classList.toggle('fa-regular');
+                    icon.classList.toggle('fa-solid');
+                    this.style.background = icon.classList.contains('fa-solid') ? 'var(--electric-pink)' : 'rgba(255,255,255,0.2)';
+                }
+                if (icon.classList.contains('fa-bookmark')) {
+                    icon.classList.toggle('fa-regular');
+                    icon.classList.toggle('fa-solid');
+                    this.style.background = icon.classList.contains('fa-solid') ? 'var(--royal-purple)' : 'rgba(255,255,255,0.2)';
+                }
+            });
+        });
+
+        // Filter tabs
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Mood tracker
+        document.querySelectorAll('.mood-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Affirmation save
+        const affirmationSave = document.getElementById('affirmationSave');
+        affirmationSave.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-regular');
+            icon.classList.toggle('fa-solid');
+            this.style.color = icon.classList.contains('fa-solid') ? 'var(--electric-pink)' : '';
+        });
+
+        // Load more
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        loadMoreBtn.addEventListener('click', function() {
+            this.classList.add('loading');
+            setTimeout(() => {
+                this.classList.remove('loading');
+            }, 1500);
+        });
+
+        // Follow buttons
+        document.querySelectorAll('.creator-follow').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent === 'Follow') {
+                    this.textContent = 'Following';
+                    this.classList.add('following');
+                } else {
+                    this.textContent = 'Follow';
+                    this.classList.remove('following');
+                }
+            });
+        });
+
+        // Profile dropdown
+        const navProfile = document.querySelector('.nav-profile');
+        navProfile.addEventListener('click', () => {
+            navProfile.classList.toggle('dropdown-open');
+        });
+
+        const notifBtn = document.getElementById('notifBtn');
+        const notifDropdown = document.getElementById('notifDropdown');
+
+        const notifClearBtn = document.querySelector('.notif-clear-btn');
+
+        if (notifBtn && notifDropdown) {
+            notifBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                notifDropdown.classList.toggle('open');
+                notifBtn.classList.toggle('active');
+            });
+
+            notifDropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!notifDropdown.contains(e.target) && !notifBtn.contains(e.target)) {
+                    notifDropdown.classList.remove('open');
+                    notifBtn.classList.remove('active');
+                }
+            });
+        }
+
+        if (notifClearBtn) {
+            notifClearBtn.addEventListener('click', () => {
+                const unreadCards = notifDropdown.querySelectorAll('.notif-card.unread');
+                unreadCards.forEach(card => {
+                    card.classList.remove('unread');
+                    card.classList.add('read');
+                });
+
+                const badge = notifBtn.querySelector('.notif-badge');
+                const notifCount = document.querySelector('.notif-count');
+                if (badge) {
+                    badge.textContent = '0';
+                }
+                if (notifCount) {
+                    notifCount.textContent = '0 New';
+                }
+
+                notifClearBtn.textContent = 'All read';
+                notifClearBtn.disabled = true;
+                notifClearBtn.style.opacity = '0.65';
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!navProfile.contains(e.target)) {
+                navProfile.classList.remove('dropdown-open');
+            }
+        });
+
+        // Navbar scroll behavior
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                topNavbar.classList.add('scrolled');
+            } else {
+                topNavbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>

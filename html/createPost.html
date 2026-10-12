@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post — GlowUp Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/createpost.css">
+<base target="_blank">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="nav-logo-text">GlowUp Hub</span>
+            </a>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Discover Fest — Search fashion, wellness, mood boards...">
+                <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn" id="notifBtn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notif-badge">5</span>
+                </button>
+                <button class="nav-action-btn create-post-btn" id="createPostBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                </button>
+                <div class="nav-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Profile" class="nav-avatar">
+                    <div class="profile-dropdown">
+                        <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="dashboard-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-inner">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-label">Home</span>
+                    </a>
+                    <a href="discover.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-label">Explore</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="sidebar-label">Boards</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon"><i class="fa-regular fa-comment-dots"></i></span>
+                        <span class="sidebar-label">Messages</span>
+                        <span class="sidebar-badge">3</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon"><i class="fa-regular fa-user"></i></span>
+                        <span class="sidebar-label">Profile</span>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <span class="sidebar-icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="sidebar-label">Settings</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="mood-tracker-mini">
+                        <span class="mood-label">Today's Mood</span>
+                        <div class="mood-options">
+                            <button class="mood-btn mood-happy active" title="Happy"><i class="fa-solid fa-face-smile"></i></button>
+                            <button class="mood-btn mood-calm" title="Calm"><i class="fa-solid fa-face-meh"></i></button>
+                            <button class="mood-btn mood-excited" title="Excited"><i class="fa-solid fa-face-laugh-beam"></i></button>
+                            <button class="mood-btn mood-sad" title="Reflective"><i class="fa-solid fa-face-frown"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center: Create Post Studio -->
+        <main class="center-feed create-studio" id="centerFeed">
+            <div class="studio-header">
+                <h1 class="studio-title">Create Your Post</h1>
+                <p class="studio-subtitle">Craft something beautiful and share it with the world</p>
+            </div>
+
+            <!-- Upload Media -->
+            <div class="studio-card upload-card" id="uploadCard">
+                <div class="card-header">
+                    <div class="card-icon upload-icon"><i class="fa-regular fa-image"></i></div>
+                    <div class="card-title-group">
+                        <h3 class="card-title">Upload Media</h3>
+                        <p class="card-desc">Drag & drop or click to browse</p>
+                    </div>
+                </div>
+                <div class="upload-zone" id="uploadZone"></div>
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                    <div class="upload-illustration">
+                        <i class="fa-regular fa-images"></i>
+                    </div>
+                    <p class="upload-text">Drop your images here</p>
+                    <p class="upload-hint">or <span class="upload-browse">click to browse</span></p>
+                    <p class="upload-formats">JPG, PNG, GIF, WEBP · Max 20MB</p>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*,video/*" multiple>
+                </div>
+                    <div class="upload-preview" id="uploadPreview">
+                        <div class="preview-grid" id="previewGrid"></div>
+                        <button type="button" class="add-more-btn" id="addMoreBtn">
+                            <i class="fa-solid fa-plus"></i> Add More
+                        </button>
+                    </div>
+                    <div class="upload-dragover" id="uploadDragover">
+                        <div class="dragover-ring"></div>
+                        <p>Release to upload</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caption -->
+            <div class="studio-card caption-card">
+                <div class="card-header">
+                    <div class="card-icon caption-icon"><i class="fa-regular fa-comment-dots"></i></div>
+                    <div class="card-title-group">
+                        <h3 class="card-title">Caption</h3>
+                        <p class="card-desc">Tell your story</p>
+                    </div>
+                    <button type="button" class="ai-suggest-btn" id="aiSuggestBtn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span class="ai-text">AI Suggest</span>
+                    </button>
+                </div>
+                <div class="textarea-wrapper">
+                    <textarea 
+                        id="captionInput" 
+                        class="caption-textarea" 
+                        placeholder="What's on your mind? Share your glow, your mood, your moment..."
+                        maxlength="2200"
+                    ></textarea>
+                    <div class="textarea-footer">
+                        <div class="char-count"><span id="charCount">0</span> / 2200</div>
+                        <div class="textarea-actions">
+                            <button type="button" class="action-btn" title="Add emoji"><i class="fa-regular fa-face-smile"></i></button>
+                            <button type="button" class="action-btn" title="Mention"><i class="fa-solid fa-at"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Type -->
+            <div class="studio-card type-card">
+                <div class="card-header">
+                    <div class="card-icon type-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="card-title-group">
+                        <h3 class="card-title">Post Type</h3>
+                        <p class="card-desc">Choose your vibe</p>
+                    </div>
+                </div>
+                <div class="type-options">
+                    <label class="type-option">
+                        <input type="radio" name="postType" value="image-inspiration" checked>
+                        <div class="type-card-inner">
+                            <div class="type-visual type-inspiration"><i class="fa-regular fa-image"></i></div>
+                            <div class="type-info">
+                                <span class="type-name">Image Inspiration</span>
+                                <span class="type-desc">Share aesthetic visuals</span>
+                            </div>
+                            <div class="type-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </label>
+                    <label class="type-option">
+                        <input type="radio" name="postType" value="mood-journal">
+                        <div class="type-card-inner">
+                            <div class="type-visual type-mood"><i class="fa-regular fa-file-lines"></i></div>
+                            <div class="type-info">
+                                <span class="type-name">Mood Journal</span>
+                                <span class="type-desc">Express how you feel</span>
+                            </div>
+                            <div class="type-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </label>
+                    <label class="type-option">
+                        <input type="radio" name="postType" value="beauty-tip">
+                        <div class="type-card-inner">
+                            <div class="type-visual type-beauty"><i class="fa-solid fa-droplet"></i></div>
+                            <div class="type-info">
+                                <span class="type-name">Beauty Tip</span>
+                                <span class="type-desc">Share your secrets</span>
+                            </div>
+                            <div class="type-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </label>
+                    <label class="type-option">
+                        <input type="radio" name="postType" value="anonymous-girl-talk">
+                        <div class="type-card-inner">
+                            <div class="type-visual type-anon"><i class="fa-solid fa-user-secret"></i></div>
+                            <div class="type-info">
+                                <span class="type-name">Anonymous Girl Talk</span>
+                                <span class="type-desc">Speak freely, stay private</span>
+                            </div>
+                            <div class="type-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="studio-card tags-card">
+                <div class="card-header">
+                    <div class="card-icon tags-icon"><i class="fa-solid fa-hashtag"></i></div>
+                    <div class="card-title-group">
+                        <h3 class="card-title">Tags & Hashtags</h3>
+                        <p class="card-desc">Help others discover your post</p>
+                    </div>
+                </div>
+                <div class="tags-input-wrapper">
+                    <div class="tags-container" id="tagsContainer">
+                        <input type="text" id="tagsInput" class="tags-input" placeholder="Type a tag and press Enter..." autocomplete="off">
+                    </div>
+                    <div class="tags-suggestions" id="tagsSuggestions">
+                        <span class="suggestion-label">Trending:</span>
+                        <button type="button" class="suggestion-chip" data-tag="GlowUp">#GlowUp</button>
+                        <button type="button" class="suggestion-chip" data-tag="SelfCare">#SelfCare</button>
+                        <button type="button" class="suggestion-chip" data-tag="MorningRoutine">#MorningRoutine</button>
+                        <button type="button" class="suggestion-chip" data-tag="Confidence">#Confidence</button>
+                        <button type="button" class="suggestion-chip" data-tag="GirlTalk">#GirlTalk</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publish CTA -->
+            <div class="publish-card">
+                <div class="publish-info">
+                    <div class="publish-status">
+                        <div class="status-dot" id="statusDot"></div>
+                        <span class="status-text" id="statusText">Draft in progress</span>
+                    </div>
+                    <p class="publish-hint" id="publishHint">Add an image and caption to publish</p>
+                </div>
+                <button type="button" class="publish-btn" id="publishBtn" disabled>
+                    <span class="publish-text">Publish Post</span>
+                    <i class="fa-solid fa-arrow-right publish-arrow"></i>
+                    <span class="publish-loader">
+                        <svg class="spinner" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar: Live Preview -->
+        <aside class="right-sidebar preview-sidebar" id="rightSidebar">
+            <div class="sidebar-inner">
+                <!-- Live Preview -->
+                <div class="sidebar-card preview-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-eye"></i>
+                        Live Preview
+                    </h3>
+                    <div class="preview-device">
+                        <div class="device-notch"></div>
+                        <div class="preview-content">
+                            <div class="preview-post">
+                                <div class="preview-post-header">
+                                    <div class="preview-avatar">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face" alt="You">
+                                    </div>
+                                    <div class="preview-user-info">
+                                        <span class="preview-username">@yourhandle</span>
+                                        <span class="preview-time">Just now</span>
+                                    </div>
+                                    <button class="preview-more"><i class="fa-solid fa-ellipsis"></i></button>
+                                </div>
+                                <div class="preview-media" id="previewMedia">
+                                    <div class="preview-media-placeholder">
+                                        <i class="fa-regular fa-image"></i>
+                                        <span>Your media will appear here</span>
+                                    </div>
+                                    <div class="preview-media-grid" id="previewMediaGrid"></div>
+                                </div>
+                                <div class="preview-post-body">
+                                    <p class="preview-caption" id="previewCaption">
+                                        <span class="caption-placeholder">Your caption will appear here...</span>
+                                    </p>
+                                    <div class="preview-tags" id="previewTags"></div>
+                                </div>
+                                <div class="preview-post-actions">
+                                    <button class="preview-action"><i class="fa-regular fa-heart"></i> <span>0</span></button>
+                                    <button class="preview-action"><i class="fa-regular fa-comment"></i> <span>0</span></button>
+                                    <button class="preview-action"><i class="fa-solid fa-share"></i> <span>0</span></button>
+                                    <button class="preview-action"><i class="fa-regular fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-badge-row">
+                        <span class="preview-badge" id="previewBadge">Image Inspiration</span>
+                    </div>
+                </div>
+
+                <!-- Post Tips -->
+                <div class="sidebar-card tips-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Pro Tips
+                    </h3>
+                    <div class="tip-list">
+                        <div class="tip-item">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Use high-quality images for better engagement</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Keep captions authentic and relatable</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Add 3-5 relevant hashtags for discoverability</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fa-solid fa-check-circle"></i>
+                            <span>Post consistently to grow your audience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trending Tags -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        Trending Now
+                    </h3>
+                    <div class="trending-tags">
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#GlowUp2026</span>
+                            <span class="tag-count">24.5K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#MorningRoutine</span>
+                            <span class="tag-count">18.2K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#SelfCareSunday</span>
+                            <span class="tag-count">15.8K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#VisionBoard</span>
+                            <span class="tag-count">12.1K posts</span>
+                        </a>
+                        <a href="#" class="trend-tag">
+                            <span class="tag-name">#GirlTalk</span>
+                            <span class="tag-count">9.7K posts</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <button class="mobile-create-btn" id="mobileCreateBtn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Chat</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="createpost.js"></script>
+</body>
+</html>

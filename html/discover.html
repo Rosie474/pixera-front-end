@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Fest — GlowUp Hub</title>
+    <link rel="stylesheet" href="../css/discover.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <base target="_blank">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-shape ambient-shape-1"></div>
+        <div class="ambient-shape ambient-shape-2"></div>
+        <div class="ambient-shape ambient-shape-3"></div>
+        <div class="ambient-shape ambient-shape-4"></div>
+    </div>
+
+    <!-- Top Navbar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="nav-logo-text">GlowUp Hub</span>
+            </a>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notif-badge">3</span>
+                </button>
+                <a href="createpost2.html">
+                    <button class="nav-action-btn create-post-btn" id="createPostBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Create</span>
+                    </button>
+                </a>
+                <div class="nav-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face"
+                        alt="Profile" class="nav-avatar">
+                    <div class="profile-dropdown">
+                        <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="login.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="discover-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-inner">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-label">Home</span>
+                    </a>
+                    <a href="discover.html" class="sidebar-link active" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-label">Explore</span>
+                    </a>
+                    <a href="boards.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="sidebar-label">Boards</span>
+                    </a>
+                    <a href="messages.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-comment-dots"></i></span>
+                        <span class="sidebar-label">Messages</span>
+                        <span class="sidebar-badge">2</span>
+                    </a>
+                    <a href="profile.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-user"></i></span>
+                        <span class="sidebar-label">Profile</span>
+                    </a>
+                    <a href="settings.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="sidebar-label">Settings</span>
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Center Content -->
+        <main class="discover-main">
+            <!-- Hero Search Section -->
+            <div class="discover-hero">
+                <div class="discover-hero-inner">
+                    <h1 class="discover-title">Discover Fest</h1>
+                    <p class="discover-subtitle">Find what makes you glow. Search millions of posts, creators, and
+                        inspiration.</p>
+
+                    <div class="mega-search">
+                        <div class="mega-search-wrap">
+                            <i class="fa-solid fa-magnifying-glass mega-search-icon"></i>
+                            <input type="text" class="mega-search-input" id="megaSearch"
+                                placeholder="Search fashion, wellness, mood boards, creators..."
+                                value="morning skincare routine">
+                            <button class="mega-search-clear" id="searchClear"><i
+                                    class="fa-solid fa-xmark"></i></button>
+                            <button class="mega-search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="trending-chips">
+                        <span class="chips-label"><i class="fa-solid fa-fire-flame-curved"></i> Trending:</span>
+                        <button class="trend-chip">#GlowUp2026</button>
+                        <button class="trend-chip">Glass Skin</button>
+                        <button class="trend-chip">Capsule Wardrobe</button>
+                        <button class="trend-chip">5AM Club</button>
+                        <button class="trend-chip">Manifestation</button>
+                        <button class="trend-chip">Clean Girl Aesthetic</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="cat-filter active" data-cat="all">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>All</span>
+                </button>
+                <button class="cat-filter" data-cat="fashion">
+                    <i class="fa-solid fa-shirt"></i>
+                    <span>Fashion</span>
+                </button>
+                <button class="cat-filter" data-cat="hair">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Hair</span>
+                </button>
+                <button class="cat-filter" data-cat="skin">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Skin</span>
+                </button>
+                <button class="cat-filter" data-cat="nails">
+                    <i class="fa-solid fa-hand-sparkles"></i>
+                    <span>Nails</span>
+                </button>
+                <button class="cat-filter" data-cat="wellness">
+                    <i class="fa-solid fa-spa"></i>
+                    <span>Wellness</span>
+                </button>
+                <button class="cat-filter" data-cat="decor">
+                    <i class="fa-solid fa-couch"></i>
+                    <span>Room Decor</span>
+                </button>
+                <button class="cat-filter" data-cat="fitness">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span>Fitness</span>
+                </button>
+            </div>
+
+            <!-- Result Tabs -->
+            <div class="result-tabs">
+                <button class="result-tab active" data-tab="posts">
+                    <i class="fa-solid fa-images"></i>
+                    <span>Posts</span>
+                    <span class="tab-count">1,247</span>
+                </button>
+                <button class="result-tab" data-tab="creators">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Creators</span>
+                    <span class="tab-count">86</span>
+                </button>
+                <button class="result-tab" data-tab="tags">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <span>Tags</span>
+                    <span class="tab-count">42</span>
+                </button>
+                <button class="result-tab" data-tab="boards">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Boards</span>
+                    <span class="tab-count">156</span>
+                </button>
+            </div>
+
+            <!-- Results Content -->
+            <div class="results-content" id="resultsContent">
+                <!-- Posts Tab -->
+                <div class="tab-panel active" id="panel-posts">
+                    <div class="results-grid posts-grid">
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&h=650&fit=crop"
+                                    alt="Skincare">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face"
+                                        alt="Amara">
+                                    <span class="post-username">Amara Chen</span>
+                                </div>
+                                <h3 class="post-title">10-Step Korean Skincare for Glass Skin</h3>
+                                <p class="post-desc">The exact routine I follow every morning. Double cleanse, essence,
+                                    serum, and the moisturizer that changed everything.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 4.2K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 186</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 342</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=600&fit=crop"
+                                    alt="Fashion">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+                                        alt="Jasmine">
+                                    <span class="post-username">Jasmine Brooks</span>
+                                </div>
+                                <h3 class="post-title">Spring Capsule Wardrobe 2026</h3>
+                                <p class="post-desc">15 pieces, 45 outfits. Minimalist doesn't mean boring. Here's how I
+                                    built a closet that works harder than I do.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 8.7K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 324</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 891</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=500&h=700&fit=crop"
+                                    alt="Beauty">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face"
+                                        alt="Priya">
+                                    <span class="post-username">Priya Sharma</span>
+                                </div>
+                                <h3 class="post-title">Vitamin C Serums Ranked & Tested</h3>
+                                <p class="post-desc">I tested 12 vitamin C serums over 90 days. These 4 actually
+                                    delivered visible brightening results.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 6.1K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 278</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 445</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=550&fit=crop"
+                                    alt="Wellness">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
+                                        alt="Zoe">
+                                    <span class="post-username">Zoe Martinez</span>
+                                </div>
+                                <h3 class="post-title">My 5AM Morning Ritual Breakdown</h3>
+                                <p class="post-desc">Meditation, journaling, movement, fuel. The exact 90-minute routine
+                                    that transformed my energy levels.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 12.4K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 567</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 1.2K</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&h=620&fit=crop"
+                                    alt="Hair">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=face"
+                                        alt="Luna">
+                                    <span class="post-username">Luna Park</span>
+                                </div>
+                                <h3 class="post-title">Heatless Curls Overnight Tutorial</h3>
+                                <p class="post-desc">No heat damage, no tools, just a silk robe tie and 6 hours of
+                                    sleep. Woke up to salon-worthy waves.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 9.3K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 412</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 678</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="result-card post-card">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=580&fit=crop"
+                                    alt="Fitness">
+                                <div class="post-overlay">
+                                    <button class="overlay-btn"><i class="fa-solid fa-heart"></i></button>
+                                    <button class="overlay-btn"><i class="fa-solid fa-bookmark"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-user">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
+                                        alt="Zoe">
+                                    <span class="post-username">Zoe Martinez</span>
+                                </div>
+                                <h3 class="post-title">20-Minute HIIT for Busy Women</h3>
+                                <p class="post-desc">No gym, no equipment, maximum results. The circuit I do in my
+                                    living room before my morning coffee.</p>
+                                <div class="post-meta">
+                                    <span><i class="fa-solid fa-heart"></i> 7.8K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 298</span>
+                                    <span><i class="fa-solid fa-share-nodes"></i> 534</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Creators Tab -->
+                <div class="tab-panel" id="panel-creators">
+                    <div class="results-grid creators-grid">
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face"
+                                        alt="Amara">
+                                    <div class="creator-result-badge"><i class="fa-solid fa-crown"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Amara Chen</h3>
+                                <p class="creator-result-handle">@amaraglows</p>
+                                <p class="creator-result-bio">Skincare scientist & wellness coach. Helping women glow
+                                    from the inside out.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>542K</strong> followers</span>
+                                    <span><strong>1.2M</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face"
+                                        alt="Jasmine">
+                                    <div class="creator-result-badge verified"><i class="fa-solid fa-check"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Jasmine Brooks</h3>
+                                <p class="creator-result-handle">@jazzylifestyle</p>
+                                <p class="creator-result-bio">Fashion entrepreneur & style curator. Thrift to luxury,
+                                    authenticity always.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>328K</strong> followers</span>
+                                    <span><strong>890K</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face"
+                                        alt="Priya">
+                                    <div class="creator-result-badge verified"><i class="fa-solid fa-check"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Priya Sharma</h3>
+                                <p class="creator-result-handle">@priyainpower</p>
+                                <p class="creator-result-bio">Tech exec turned mindset mentor. Career growth meets inner
+                                    peace.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>715K</strong> followers</span>
+                                    <span><strong>2.1M</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face"
+                                        alt="Zoe">
+                                    <div class="creator-result-badge"><i class="fa-solid fa-crown"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Zoe Martinez</h3>
+                                <p class="creator-result-handle">@zoeglowfit</p>
+                                <p class="creator-result-bio">Certified trainer & nutritionist. Science-backed fitness
+                                    for real women.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>421K</strong> followers</span>
+                                    <span><strong>967K</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&h=120&fit=crop&crop=face"
+                                        alt="Luna">
+                                    <div class="creator-result-badge verified"><i class="fa-solid fa-check"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Luna Park</h3>
+                                <p class="creator-result-handle">@lunabeauty</p>
+                                <p class="creator-result-bio">Hair care specialist & product reviewer. Your curl routine
+                                    starts here.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>289K</strong> followers</span>
+                                    <span><strong>712K</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card creator-result">
+                            <div class="creator-cover">
+                                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=160&fit=crop"
+                                    alt="Cover">
+                            </div>
+                            <div class="creator-result-body">
+                                <div class="creator-result-avatar-wrap">
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=120&h=120&fit=crop&crop=face"
+                                        alt="Maya">
+                                    <div class="creator-result-badge verified"><i class="fa-solid fa-check"></i></div>
+                                </div>
+                                <h3 class="creator-result-name">Maya Torres</h3>
+                                <p class="creator-result-handle">@mayamindful</p>
+                                <p class="creator-result-bio">Mindfulness coach & journal therapist. Healing through
+                                    intentional writing.</p>
+                                <div class="creator-result-stats">
+                                    <span><strong>198K</strong> followers</span>
+                                    <span><strong>445K</strong> likes</span>
+                                </div>
+                                <button class="creator-result-follow">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags Tab -->
+                <div class="tab-panel" id="panel-tags">
+                    <div class="results-grid tags-grid">
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#GlassSkin</h3>
+                                <p class="tag-desc">The dewy, luminous complexion trend taking over skincare routines
+                                    worldwide.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 24.5K posts</span>
+                                    <span><i class="fa-solid fa-fire"></i> Trending</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#CapsuleWardrobe</h3>
+                                <p class="tag-desc">Minimalist fashion philosophy: fewer pieces, infinite combinations,
+                                    maximum style.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 18.2K posts</span>
+                                    <span><i class="fa-solid fa-arrow-trend-up"></i> Rising</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#5AMClub</h3>
+                                <p class="tag-desc">Early risers building discipline, clarity, and momentum before the
+                                    world wakes up.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 15.8K posts</span>
+                                    <span><i class="fa-solid fa-fire"></i> Trending</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#VitaminCGlow</h3>
+                                <p class="tag-desc">Brightening routines, product reviews, and before-and-after
+                                    transformations.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 12.1K posts</span>
+                                    <span><i class="fa-solid fa-arrow-trend-up"></i> Rising</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#HomeWorkout</h3>
+                                <p class="tag-desc">No gym membership required. Living room circuits, bodyweight
+                                    training, and results.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 9.7K posts</span>
+                                    <span><i class="fa-solid fa-fire"></i> Trending</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card tag-card">
+                            <div class="tag-visual">
+                                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=300&fit=crop"
+                                    alt="">
+                                <div class="tag-overlay">
+                                    <span class="tag-hash">#</span>
+                                </div>
+                            </div>
+                            <div class="tag-info">
+                                <h3 class="tag-name">#HeatlessCurls</h3>
+                                <p class="tag-desc">Overnight waves without the damage. Silk ties, robe methods, and
+                                    sock tutorials.</p>
+                                <div class="tag-metrics">
+                                    <span><i class="fa-solid fa-file-image"></i> 8.3K posts</span>
+                                    <span><i class="fa-solid fa-arrow-trend-up"></i> Rising</span>
+                                </div>
+                                <button class="tag-follow">Follow Tag</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boards Tab -->
+                <div class="tab-panel" id="panel-boards">
+                    <div class="results-grid boards-grid">
+                        <div class="result-card board-result">
+                            <div class="board-collage">
+                                <div class="board-collage-main">
+                                    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300&h=400&fit=crop"
+                                        alt="">
+                                </div>
+                                <div class="board-collage-side">
+                                    <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <img src="https://images.unsplash.com/photo-1570194065650-d99fb4b38b15?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <div class="board-collage-more">+12</div>
+                                </div>
+                            </div>
+                            <div class="board-info">
+                                <div class="board-creator">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face"
+                                        alt="">
+                                    <span>Amara Chen</span>
+                                </div>
+                                <h3 class="board-name">Glass Skin Bible</h3>
+                                <p class="board-desc">Everything you need for that luminous, poreless complexion.
+                                    Routines, products, and honest reviews.</p>
+                                <div class="board-meta">
+                                    <span><i class="fa-solid fa-thumbtack"></i> 1,247 pins</span>
+                                    <span><i class="fa-solid fa-users"></i> 45.2K followers</span>
+                                </div>
+                                <button class="board-save">Save Board</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card board-result">
+                            <div class="board-collage">
+                                <div class="board-collage-main">
+                                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300&h=400&fit=crop"
+                                        alt="">
+                                </div>
+                                <div class="board-collage-side">
+                                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <div class="board-collage-more">+24</div>
+                                </div>
+                            </div>
+                            <div class="board-info">
+                                <div class="board-creator">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
+                                        alt="">
+                                    <span>Jasmine Brooks</span>
+                                </div>
+                                <h3 class="board-name">Spring Capsule 2026</h3>
+                                <p class="board-desc">15-piece wardrobe, 45 outfits. Minimalist style that works harder
+                                    than you do.</p>
+                                <div class="board-meta">
+                                    <span><i class="fa-solid fa-thumbtack"></i> 890 pins</span>
+                                    <span><i class="fa-solid fa-users"></i> 32.1K followers</span>
+                                </div>
+                                <button class="board-save">Save Board</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card board-result">
+                            <div class="board-collage">
+                                <div class="board-collage-main">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=300&h=400&fit=crop"
+                                        alt="">
+                                </div>
+                                <div class="board-collage-side">
+                                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <div class="board-collage-more">+8</div>
+                                </div>
+                            </div>
+                            <div class="board-info">
+                                <div class="board-creator">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face"
+                                        alt="">
+                                    <span>Zoe Martinez</span>
+                                </div>
+                                <h3 class="board-name">Morning Rituals</h3>
+                                <p class="board-desc">The 90-minute routine that transformed my energy. Meditation,
+                                    movement, and mindful fuel.</p>
+                                <div class="board-meta">
+                                    <span><i class="fa-solid fa-thumbtack"></i> 567 pins</span>
+                                    <span><i class="fa-solid fa-users"></i> 28.7K followers</span>
+                                </div>
+                                <button class="board-save">Save Board</button>
+                            </div>
+                        </div>
+
+                        <div class="result-card board-result">
+                            <div class="board-collage">
+                                <div class="board-collage-main">
+                                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=400&fit=crop"
+                                        alt="">
+                                </div>
+                                <div class="board-collage-side">
+                                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=150&h=150&fit=crop"
+                                        alt="">
+                                    <div class="board-collage-more">+18</div>
+                                </div>
+                            </div>
+                            <div class="board-info">
+                                <div class="board-creator">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=40&h=40&fit=crop&crop=face"
+                                        alt="">
+                                    <span>Luna Park</span>
+                                </div>
+                                <h3 class="board-name">Curl Care Masterclass</h3>
+                                <p class="board-desc">Product recommendations, wash day routines, and protective styles
+                                    for every curl type.</p>
+                                <div class="board-meta">
+                                    <span><i class="fa-solid fa-thumbtack"></i> 1,102 pins</span>
+                                    <span><i class="fa-solid fa-users"></i> 56.3K followers</span>
+                                </div>
+                                <button class="board-save">Save Board</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <a href="dashboard.html" class="mobile-nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="mobile-nav-link active">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <button class="mobile-create-btn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Chat</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const leftSidebar = document.getElementById('leftSidebar');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            leftSidebar.classList.toggle('mobile-open');
+            mobileMenuToggle.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (leftSidebar.classList.contains('mobile-open') &&
+                !leftSidebar.contains(e.target) &&
+                !mobileMenuToggle.contains(e.target)) {
+                leftSidebar.classList.remove('mobile-open');
+                mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+
+        // Profile dropdown
+        const navProfile = document.querySelector('.nav-profile');
+        navProfile.addEventListener('click', () => {
+            navProfile.classList.toggle('dropdown-open');
+        });
+        document.addEventListener('click', (e) => {
+            if (!navProfile.contains(e.target)) {
+                navProfile.classList.remove('dropdown-open');
+            }
+        });
+
+        // Search clear
+        const megaSearch = document.getElementById('megaSearch');
+        const searchClear = document.getElementById('searchClear');
+
+        searchClear.addEventListener('click', () => {
+            megaSearch.value = '';
+            megaSearch.focus();
+        });
+
+        megaSearch.addEventListener('input', () => {
+            searchClear.style.opacity = megaSearch.value ? '1' : '0';
+            searchClear.style.pointerEvents = megaSearch.value ? 'auto' : 'none';
+        });
+        searchClear.style.opacity = megaSearch.value ? '1' : '0';
+        searchClear.style.pointerEvents = megaSearch.value ? 'auto' : 'none';
+
+        // Category filters
+        document.querySelectorAll('.cat-filter').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.cat-filter').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Result tabs
+        const resultTabs = document.querySelectorAll('.result-tab');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        resultTabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const targetTab = this.dataset.tab;
+
+                resultTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                tabPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                    if (panel.id === 'panel-' + targetTab) {
+                        panel.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Trending chips
+        document.querySelectorAll('.trend-chip').forEach(chip => {
+            chip.addEventListener('click', function () {
+                megaSearch.value = this.textContent.replace('#', '');
+                megaSearch.focus();
+            });
+        });
+
+        // Follow buttons (creators)
+        document.querySelectorAll('.creator-result-follow').forEach(btn => {
+            btn.addEventListener('click', function () {
+                if (this.textContent === 'Follow') {
+                    this.textContent = 'Following';
+                    this.classList.add('following');
+                } else {
+                    this.textContent = 'Follow';
+                    this.classList.remove('following');
+                }
+            });
+        });
+
+        // Tag follow buttons
+        document.querySelectorAll('.tag-follow').forEach(btn => {
+            btn.addEventListener('click', function () {
+                if (this.textContent === 'Follow Tag') {
+                    this.textContent = 'Following';
+                    this.classList.add('following');
+                } else {
+                    this.textContent = 'Follow Tag';
+                    this.classList.remove('following');
+                }
+            });
+        });
+
+        // Board save buttons
+        document.querySelectorAll('.board-save').forEach(btn => {
+            btn.addEventListener('click', function () {
+                if (this.textContent === 'Save Board') {
+                    this.textContent = 'Saved';
+                    this.classList.add('saved');
+                } else {
+                    this.textContent = 'Save Board';
+                    this.classList.remove('saved');
+                }
+            });
+        });
+
+        // Post overlay buttons
+        document.querySelectorAll('.overlay-btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('fa-heart')) {
+                    icon.classList.toggle('fa-regular');
+                    icon.classList.toggle('fa-solid');
+                    this.style.background = icon.classList.contains('fa-solid') ? 'var(--electric-pink)' : 'rgba(255,255,255,0.25)';
+                }
+                if (icon.classList.contains('fa-bookmark')) {
+                    icon.classList.toggle('fa-regular');
+                    icon.classList.toggle('fa-solid');
+                    this.style.background = icon.classList.contains('fa-solid') ? 'var(--royal-purple)' : 'rgba(255,255,255,0.25)';
+                }
+            });
+        });
+
+        // Navbar scroll
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const topNavbar = document.getElementById('topNavbar');
+            if (currentScroll > 50) {
+                topNavbar.classList.add('scrolled');
+            } else {
+                topNavbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+
+</html>

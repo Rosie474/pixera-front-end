@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elena Rose — GlowUp Hub</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <base target="_blank">
+<base target="_blank">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="nav-logo" target="_self">
+                <span class="nav-logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="nav-logo-text">GlowUp Hub</span>
+            </a>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Discover Fest — Search fashion, wellness, mood boards...">
+                <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn" id="notifBtn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notif-badge">5</span>
+                </button>
+                <a href="createpost2.html" target="_self">
+                    <button class="nav-action-btn create-post-btn" id="createPostBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Create</span>
+                    </button>
+                </a>
+                <div class="nav-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Profile" class="nav-avatar">
+                    <div class="profile-dropdown">
+                        <a href="profile.html" target="_self"><i class="fa-regular fa-user"></i> Profile</a>
+                        <a href="settings.html" target="_self"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#" target="_self"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="dashboard-layout profile-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-inner">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-label">Home</span>
+                    </a>
+                    <a href="discover.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-label">Explore</span>
+                    </a>
+                    <a href="boards.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="sidebar-label">Boards</span>
+                    </a>
+                    <a href="messages.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-comment-dots"></i></span>
+                        <span class="sidebar-label">Messages</span>
+                        <span class="sidebar-badge">3</span>
+                    </a>
+                    <a href="profile.html" class="sidebar-link active" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-user"></i></span>
+                        <span class="sidebar-label">Profile</span>
+                    </a>
+                    <a href="settings.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="sidebar-label">Settings</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="mood-tracker-mini">
+                        <span class="mood-label">Today's Mood</span>
+                        <div class="mood-options">
+                            <button class="mood-btn mood-happy active" title="Happy"><i class="fa-solid fa-face-smile"></i></button>
+                            <button class="mood-btn mood-calm" title="Calm"><i class="fa-solid fa-face-meh"></i></button>
+                            <button class="mood-btn mood-excited" title="Excited"><i class="fa-solid fa-face-laugh-beam"></i></button>
+                            <button class="mood-btn mood-sad" title="Reflective"><i class="fa-solid fa-face-frown"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Profile Content -->
+        <main class="center-feed profile-main" id="centerFeed">
+
+            <!-- Profile Hero Section -->
+            <section class="profile-hero">
+                <div class="profile-cover">
+                    <img src="../images/pawel-czerwinski-fcZU7mRWImY-unsplash.jpg" alt="Cover" class="cover-image">
+                    <div class="cover-overlay"></div>
+                    <div class="cover-shine"></div>
+                </div>
+
+                <div class="profile-hero-content">
+                    <div class="profile-avatar-wrap">
+                        <div class="profile-avatar-ring">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face" alt="Elena Rose" class="profile-avatar-img">
+                            <div class="profile-status-dot online"></div>
+                        </div>
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="profile-name-row">
+                            <h1 class="profile-name">Elena Rose Mitchell</h1>
+                            <span class="profile-badge verified"><i class="fa-solid fa-check"></i></span>
+                            <span class="profile-badge crown"><i class="fa-solid fa-crown"></i></span>
+                        </div>
+                        <p class="profile-handle">@elenarose</p>
+                        <p class="profile-bio">Fashion enthusiast, wellness advocate, and digital creator. Sharing daily glow-ups, style tips, and mindful living. Based in NYC ✨</p>
+
+                        <div class="profile-meta">
+                            <span class="meta-item"><i class="fa-solid fa-location-dot"></i> New York, NY</span>
+                            <span class="meta-item"><i class="fa-solid fa-link"></i> elenarose.com</span>
+                            <span class="meta-item"><i class="fa-regular fa-calendar"></i> Joined March 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button class="profile-btn primary" id="editProfileBtn">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit Profile
+                        </button>
+                        <button class="profile-btn secondary" id="shareProfileBtn">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            Share
+                        </button>
+                        <button class="profile-btn icon-only" id="moreProfileBtn">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Bar -->
+            <section class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">247</span>
+                    <span class="stat-label">Posts</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">12.4K</span>
+                    <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">892</span>
+                    <span class="stat-label">Following</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item glow-stat">
+                    <span class="stat-value">
+                        <i class="fa-solid fa-bolt"></i>
+                        9,840
+                    </span>
+                    <span class="stat-label">Glow Score</span>
+                </div>
+            </section>
+
+            <!-- Glow Score Feature Card -->
+            <section class="glow-score-section">
+                <div class="glow-score-card">
+                    <div class="glow-score-glow"></div>
+                    <div class="glow-score-content">
+                        <div class="glow-score-header">
+                            <div class="glow-score-icon">
+                                <i class="fa-solid fa-sparkles"></i>
+                            </div>
+                            <div class="glow-score-title-wrap">
+                                <h2 class="glow-score-title">Your Glow Score</h2>
+                                <p class="glow-score-subtitle">Track your influence and engagement</p>
+                            </div>
+                        </div>
+
+                        <div class="glow-score-display">
+                            <div class="glow-score-ring">
+                                <svg viewBox="0 0 160 160">
+                                    <defs>
+                                        <linearGradient id="glowRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FF2D92"/>
+                                            <stop offset="50%" stop-color="#E91E8C"/>
+                                            <stop offset="100%" stop-color="#7B2D8E"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="rgba(255,45,146,0.08)" stroke-width="10"/>
+                                    <circle cx="80" cy="80" r="70" fill="none" stroke="url(#glowRingGrad)" stroke-width="10" stroke-linecap="round" 
+                                            stroke-dasharray="396 440" transform="rotate(-90 80 80)" class="glow-ring-progress"/>
+                                </svg>
+                                <div class="glow-score-number">
+                                    <span class="glow-score-big">98</span>
+                                    <span class="glow-score-small">/100</span>
+                                </div>
+                            </div>
+
+                            <div class="glow-score-breakdown">
+                                <div class="breakdown-item">
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" style="width: 92%"></div>
+                                    </div>
+                                    <div class="breakdown-info">
+                                        <span class="breakdown-name">Engagement</span>
+                                        <span class="breakdown-value">92%</span>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" style="width: 88%"></div>
+                                    </div>
+                                    <div class="breakdown-info">
+                                        <span class="breakdown-name">Content Quality</span>
+                                        <span class="breakdown-value">88%</span>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" style="width: 95%"></div>
+                                    </div>
+                                    <div class="breakdown-info">
+                                        <span class="breakdown-name">Consistency</span>
+                                        <span class="breakdown-value">95%</span>
+                                    </div>
+                                </div>
+                                <div class="breakdown-item">
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" style="width: 85%"></div>
+                                    </div>
+                                    <div class="breakdown-info">
+                                        <span class="breakdown-name">Community</span>
+                                        <span class="breakdown-value">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glow-score-rank">
+                            <span class="rank-badge">
+                                <i class="fa-solid fa-crown"></i>
+                                Top 2% of Creators
+                            </span>
+                            <span class="rank-text">You're glowing brighter than 98% of the community</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Tabs -->
+            <div class="profile-content-tabs">
+                <button class="content-tab active" data-tab="posts">
+                    <i class="fa-solid fa-grid-2"></i>
+                    <span>Posts</span>
+                </button>
+                <button class="content-tab" data-tab="saved">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <span>Saved</span>
+                </button>
+                <button class="content-tab" data-tab="tagged">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Tagged</span>
+                </button>
+                <button class="content-tab" data-tab="boards">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Boards</span>
+                </button>
+            </div>
+
+            <!-- Posts Gallery Section -->
+            <section class="profile-content-section active" id="content-posts">
+                <div class="posts-masonry">
+                    <!-- Post 1 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=800&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 2.4K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 89</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>This season's must-have: oversized blazers in pastel tones ✨ <span class="post-tag">#FashionGlow</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=750&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 1.8K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 64</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Monochrome moment. Sometimes less really is more 🖤 <span class="post-tag">#Minimalist</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=700&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 3.1K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 124</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Glass skin routine breakdown 🧴 <span class="post-tag">#Skincare</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=800&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 4.2K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 201</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Weekend market finds. This vintage silk scarf was $12! <span class="post-tag">#ThriftFlip</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=600&h=700&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 5.6K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 312</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Skincare shelfie organization 🌸 <span class="post-tag">#Shelfie</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=800&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 1.2K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 45</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Runway vibes for brunch today 👠 <span class="post-tag">#OOTD</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 7 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&h=750&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 3.8K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 178</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Golden hour glow is unmatched ✨ <span class="post-tag">#GoldenHour</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 8 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=700&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 2.1K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 92</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Shopping haul from Soho boutiques 🛍️ <span class="post-tag">#Haul</span></p>
+                        </div>
+                    </article>
+
+                    <!-- Post 9 -->
+                    <article class="post-card">
+                        <div class="post-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=800&fit=crop" alt="Post" class="post-image">
+                            <div class="post-overlay">
+                                <div class="post-stats-overlay">
+                                    <span><i class="fa-solid fa-heart"></i> 6.2K</span>
+                                    <span><i class="fa-regular fa-comment"></i> 445</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-caption">
+                            <p>Self-care Sunday essentials 🛁 <span class="post-tag">#SelfCare</span></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Saved Boards Section -->
+            <section class="profile-content-section" id="content-saved">
+                <div class="boards-grid">
+                    <div class="board-card featured">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">42 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Spring Capsule 2026</h3>
+                            <p class="board-desc">Pastel blazers, linen sets, and floral accents</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">28 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Glass Skin Routine</h3>
+                            <p class="board-desc">K-beauty inspired skincare essentials</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">56 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Morning Rituals</h3>
+                            <p class="board-desc">5AM club, meditation, and wellness</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">34 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">NYC Street Style</h3>
+                            <p class="board-desc">Urban fashion inspo from the city</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6e?w=400&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">19 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Travel Diaries</h3>
+                            <p class="board-desc">Paris, Tokyo, Milan — fashion week memories</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card create-board">
+                        <div class="create-board-inner">
+                            <div class="create-board-icon">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <span class="create-board-text">Create New Board</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tagged Section -->
+            <section class="profile-content-section" id="content-tagged">
+                <div class="tagged-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="placeholder-title">No Tagged Posts Yet</h3>
+                    <p class="placeholder-desc">When people tag you in posts, they'll appear here.</p>
+                </div>
+            </section>
+
+            <!-- Boards Section -->
+            <section class="profile-content-section" id="content-boards">
+                <div class="boards-grid">
+                    <div class="board-card large">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">87 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Vision Board 2026</h3>
+                            <p class="board-desc">Manifesting goals, dreams, and glow-ups</p>
+                        </div>
+                    </div>
+
+                    <div class="board-card large">
+                        <div class="board-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Board" class="board-image">
+                            <div class="board-overlay">
+                                <span class="board-pin-count">63 pins</span>
+                            </div>
+                        </div>
+                        <div class="board-info">
+                            <h3 class="board-name">Fitness Journey</h3>
+                            <p class="board-desc">Workouts, progress, and healthy habits</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar" id="rightSidebar">
+            <div class="sidebar-inner">
+                <!-- About Card -->
+                <div class="sidebar-card about-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-circle-info"></i>
+                        About
+                    </h3>
+                    <div class="about-content">
+                        <p class="about-text">Digital creator passionate about sustainable fashion, mental wellness, and empowering women to glow from within.</p>
+                        <div class="about-details">
+                            <div class="about-detail">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Content Creator at GlowUp Hub</span>
+                            </div>
+                            <div class="about-detail">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span>Fashion Institute of Technology</span>
+                            </div>
+                            <div class="about-detail">
+                                <i class="fa-solid fa-heart"></i>
+                                <span>In a relationship with @marcusj</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Interests -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-hashtag"></i>
+                        Top Interests
+                    </h3>
+                    <div class="interests-cloud">
+                        <span class="interest-tag">Fashion</span>
+                        <span class="interest-tag">Wellness</span>
+                        <span class="interest-tag">Skincare</span>
+                        <span class="interest-tag">Travel</span>
+                        <span class="interest-tag">Photography</span>
+                        <span class="interest-tag">Yoga</span>
+                        <span class="interest-tag">Sustainability</span>
+                        <span class="interest-tag">NYC Life</span>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Recent Activity
+                    </h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-text">Liked <strong>Amara's</strong> post</span>
+                                <span class="activity-time">2h ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-text">Commented on <strong>Zoe's</strong> tip</span>
+                                <span class="activity-time">5h ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-text">Followed <strong>Luna Park</strong></span>
+                                <span class="activity-time">1d ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div class="activity-info">
+                                <span class="activity-text">Created <strong>Spring Capsule</strong> board</span>
+                                <span class="activity-time">2d ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Affirmation -->
+                <div class="sidebar-card affirmation-card">
+                    <div class="affirmation-glow"></div>
+                    <div class="affirmation-content">
+                        <div class="affirmation-icon">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="affirmation-text">Your vibe attracts your tribe. Keep shining unapologetically.</p>
+                        <div class="affirmation-footer">
+                            <span class="affirmation-date">Today's Affirmation</span>
+                            <button class="affirmation-save" id="affirmationSave">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="dashboard.html" class="mobile-nav-link" target="_self">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="discover.html" class="mobile-nav-link" target="_self">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <button class="mobile-create-btn" id="mobileCreateBtn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <a href="#" class="mobile-nav-link" target="_self">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Chat</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-link active" target="_self">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const leftSidebar = document.getElementById('leftSidebar');
+        const topNavbar = document.getElementById('topNavbar');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            leftSidebar.classList.toggle('mobile-open');
+            mobileMenuToggle.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (leftSidebar.classList.contains('mobile-open') && 
+                !leftSidebar.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                leftSidebar.classList.remove('mobile-open');
+                mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+
+        // Profile dropdown
+        const navProfile = document.querySelector('.nav-profile');
+        navProfile.addEventListener('click', () => {
+            navProfile.classList.toggle('dropdown-open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navProfile.contains(e.target)) {
+                navProfile.classList.remove('dropdown-open');
+            }
+        });
+
+        // Navbar scroll behavior
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                topNavbar.classList.add('scrolled');
+            } else {
+                topNavbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mood tracker
+        document.querySelectorAll('.mood-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Profile content tabs
+        const contentTabs = document.querySelectorAll('.content-tab');
+        const contentSections = document.querySelectorAll('.profile-content-section');
+
+        contentTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+
+                contentTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === 'content-' + targetTab) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Affirmation save
+        const affirmationSave = document.getElementById('affirmationSave');
+        if (affirmationSave) {
+            affirmationSave.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-regular');
+                icon.classList.toggle('fa-solid');
+                this.style.color = icon.classList.contains('fa-solid') ? 'var(--electric-pink)' : '';
+            });
+        }
+
+        // Edit profile button
+        const editProfileBtn = document.getElementById('editProfileBtn');
+        if (editProfileBtn) {
+            editProfileBtn.addEventListener('click', () => {
+                window.location.href = 'settings.html';
+            });
+        }
+
+        // Share profile button
+        const shareProfileBtn = document.getElementById('shareProfileBtn');
+        if (shareProfileBtn) {
+            shareProfileBtn.addEventListener('click', () => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Elena Rose on GlowUp Hub',
+                        text: 'Check out my GlowUp Hub profile!',
+                        url: window.location.href
+                    });
+                } else {
+                    alert('Profile link copied to clipboard!');
+                }
+            });
+        }
+
+        // Post card hover effects
+        document.querySelectorAll('.post-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-6px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Board card hover
+        document.querySelectorAll('.board-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('create-board')) {
+                    const img = this.querySelector('.board-image');
+                    if (img) img.style.transform = 'scale(1.08)';
+                }
+            });
+            card.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('create-board')) {
+                    const img = this.querySelector('.board-image');
+                    if (img) img.style.transform = 'scale(1)';
+                }
+            });
+        });
+
+        // Create board card
+        const createBoardCard = document.querySelector('.create-board');
+        if (createBoardCard) {
+            createBoardCard.addEventListener('click', () => {
+                alert('Create Board modal would open here');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Chats — GlowUp Hub</title>
+    <link rel="stylesheet" href="../css/messages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="top-navbar" id="topNavbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon"><i class="fa-solid fa-sparkles"></i></span>
+                <span class="nav-logo-text">GlowUp Hub</span>
+            </a>
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search messages, people...">
+                <button class="search-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-action-btn" id="notifBtn" aria-label="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notif-badge">2</span>
+                </button>
+                <a href="createpost2.html">
+                    <button class="nav-action-btn create-post-btn" id="createPostBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                   </button>
+                </a>
+                <div class="nav-profile">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Profile" class="nav-avatar">
+                    <div class="profile-dropdown">
+                        <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+                        <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+                        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="dashboard-layout">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-inner">
+                <nav class="sidebar-nav">
+                    <a href="dashboard.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-label">Home</span>
+                    </a>
+                    <a href="discover.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-compass"></i></span>
+                        <span class="sidebar-label">Explore</span>
+                    </a>
+                    <a href="boards.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-palette"></i></span>
+                        <span class="sidebar-label">Boards</span>
+                    </a>
+                    <a href="messages.html" class="sidebar-link active" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-comment-dots"></i></span>
+                        <span class="sidebar-label">Messages</span>
+                        <span class="sidebar-badge">3</span>
+                    </a>
+                    <a href="profile.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-regular fa-user"></i></span>
+                        <span class="sidebar-label">Profile</span>
+                    </a>
+                    <a href="settings.html" class="sidebar-link" target="_self">
+                        <span class="sidebar-icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="sidebar-label">Settings</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <div class="mood-tracker-mini">
+                        <span class="mood-label">Today's Mood</span>
+                        <div class="mood-options">
+                            <button class="mood-btn mood-happy active" title="Happy"><i class="fa-solid fa-face-smile"></i></button>
+                            <button class="mood-btn mood-calm" title="Calm"><i class="fa-solid fa-face-meh"></i></button>
+                            <button class="mood-btn mood-excited" title="Excited"><i class="fa-solid fa-face-laugh-beam"></i></button>
+                            <button class="mood-btn mood-sad" title="Reflective"><i class="fa-solid fa-face-frown"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center: Glow Chats -->
+        <main class="center-feed chat-layout" id="centerFeed">
+            <!-- Conversations Panel -->
+            <div class="conversations-panel" id="conversationsPanel">
+                <div class="conv-header">
+                    <div class="conv-header-top">
+                        <h2>Messages</h2>
+                        <button class="new-msg-btn" title="New message"><i class="fa-solid fa-pen-to-square"></i></button>
+                    </div>
+                    <div class="conv-filter">
+                        <button class="filter-tab active">All</button>
+                        <button class="filter-tab">Unread <span class="filter-badge">3</span></button>
+                        <button class="filter-tab">Groups</button>
+                    </div>
+                </div>
+
+                <div class="conv-list" id="convList">
+                    <!-- Conversation 1: Active -->
+                    <div class="conv-item active" data-conv="amara">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face" alt="Amara" class="conv-avatar">
+                            <span class="conv-status online"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Amara Chen <i class="fa-solid fa-crown crown-badge"></i></span>
+                                <span class="conv-time">2m</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">Omg that wig color is EVERYTHING!! Where did you get it??</p>
+                                <span class="conv-unread">2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation 2 -->
+                    <div class="conv-item" data-conv="jasmine">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" alt="Jasmine" class="conv-avatar">
+                            <span class="conv-status online"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Jasmine Brooks <i class="fa-solid fa-check verified-badge"></i></span>
+                                <span class="conv-time">1h</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">Sent you the skincare routine breakdown! Let me know what you think</p>
+                                <span class="conv-unread">1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation 3 -->
+                    <div class="conv-item" data-conv="zoe">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face" alt="Zoe" class="conv-avatar">
+                            <span class="conv-status away"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Zoe Martinez <i class="fa-solid fa-crown crown-badge"></i></span>
+                                <span class="conv-time">3h</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">Are we still on for the glow-up brunch this Saturday?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation 4 -->
+                    <div class="conv-item" data-conv="luna">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=120&h=120&fit=crop&crop=face" alt="Luna" class="conv-avatar">
+                            <span class="conv-status offline"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Luna Park <i class="fa-solid fa-check verified-badge"></i></span>
+                                <span class="conv-time">Yesterday</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">Thank you so much for the advice! It really helped</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation 5 -->
+                    <div class="conv-item" data-conv="maya">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=120&h=120&fit=crop&crop=face" alt="Maya" class="conv-avatar">
+                            <span class="conv-status online"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Maya Torres</span>
+                                <span class="conv-time">Yesterday</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">Just posted my 5AM routine! Check it out when you can</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Conversation 6 -->
+                    <div class="conv-item" data-conv="priya">
+                        <div class="conv-avatar-wrap">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face" alt="Priya" class="conv-avatar">
+                            <span class="conv-status away"></span>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Priya Sharma <i class="fa-solid fa-check verified-badge"></i></span>
+                                <span class="conv-time">2d</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text">The double cleansing method changed my life, seriously</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Group: Girl Talk -->
+                    <div class="conv-item" data-conv="girltalk">
+                        <div class="conv-avatar-wrap group-avatar">
+                            <div class="group-avatars">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="">
+                            </div>
+                        </div>
+                        <div class="conv-body">
+                            <div class="conv-meta">
+                                <span class="conv-name">Girl Talk Squad</span>
+                                <span class="conv-time">5m</span>
+                            </div>
+                            <div class="conv-preview">
+                                <p class="conv-text"><strong>Amara:</strong> Girls, I need outfit advice for tonight!!</p>
+                                <span class="conv-unread">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Panel -->
+            <div class="chat-panel" id="chatPanel">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <button class="chat-back-btn" id="chatBackBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="chat-header-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face" alt="Amara">
+                        <span class="chat-header-status online"></span>
+                    </div>
+                    <div class="chat-header-info">
+                        <span class="chat-header-name">Amara Chen <i class="fa-solid fa-crown crown-badge"></i></span>
+                        <span class="chat-header-status-text">Active now</span>
+                    </div>
+                    <div class="chat-header-actions">
+                        <button class="chat-action-btn"><i class="fa-solid fa-phone"></i></button>
+                        <button class="chat-action-btn"><i class="fa-solid fa-video"></i></button>
+                        <button class="chat-action-btn"><i class="fa-solid fa-circle-info"></i></button>
+                    </div>
+                </div>
+
+                <!-- Messages Area -->
+                <div class="messages-area" id="messagesArea">
+                    <div class="msg-date-divider"><span>Today</span></div>
+
+                    <!-- Received -->
+                    <div class="msg-row received">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="Amara" class="msg-avatar">
+                        <div class="msg-bubble">
+                            <p class="msg-text">Hey glow queen! I saw your latest post and I'm obsessed with that hair color</p>
+                            <span class="msg-time">10:32 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Sent -->
+                    <div class="msg-row sent">
+                        <div class="msg-bubble">
+                            <p class="msg-text">Aww thank you!! It's the new Rose Gold from Luxe Wigs. Took me forever to find the right shade</p>
+                            <span class="msg-time">10:34 AM <i class="fa-solid fa-check-double read"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Received -->
+                    <div class="msg-row received">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="Amara" class="msg-avatar">
+                        <div class="msg-bubble">
+                            <p class="msg-text">Omg that wig color is EVERYTHING!! Where did you get it??</p>
+                            <span class="msg-time">10:35 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Sent with image -->
+                    <div class="msg-row sent">
+                        <div class="msg-bubble">
+                            <div class="msg-image">
+                                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&h=500&fit=crop" alt="Wig">
+                            </div>
+                            <p class="msg-text">Here's a better pic! The lighting in my room doesn't do it justice</p>
+                            <span class="msg-time">10:36 AM <i class="fa-solid fa-check-double read"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Shared Post Bubble -->
+                    <div class="msg-row received">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="Amara" class="msg-avatar">
+                        <div class="msg-bubble">
+                            <div class="shared-post">
+                                <div class="shared-header">
+                                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=60&h=60&fit=crop&crop=face" alt="Priya">
+                                    <div class="shared-meta">
+                                        <span class="shared-name">Priya Sharma</span>
+                                        <span class="shared-type">Beauty Tip</span>
+                                    </div>
+                                </div>
+                                <div class="shared-image">
+                                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=300&fit=crop" alt="Skincare">
+                                </div>
+                                <p class="shared-caption">The 60-Second Ice Facial — reduces puffiness and gives instant glow</p>
+                            </div>
+                            <p class="msg-text">Have you tried this?? I'm thinking of adding it to my morning routine</p>
+                            <span class="msg-time">10:42 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Sent -->
+                    <div class="msg-row sent">
+                        <div class="msg-bubble">
+                            <p class="msg-text">YES!! I literally do this every morning. Game changer for real. My skin has never looked better</p>
+                            <span class="msg-time">10:45 AM <i class="fa-solid fa-check-double read"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Received -->
+                    <div class="msg-row received">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="Amara" class="msg-avatar">
+                        <div class="msg-bubble">
+                            <p class="msg-text">Okay I'm sold! Ordering an ice roller right now lol</p>
+                            <span class="msg-time">10:46 AM</span>
+                        </div>
+                    </div>
+
+                    <!-- Typing indicator -->
+                    <div class="msg-row received typing-row">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face" alt="Amara" class="msg-avatar">
+                        <div class="typing-bubble">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-toolbar">
+                        <button class="input-tool"><i class="fa-regular fa-image"></i></button>
+                        <button class="input-tool"><i class="fa-regular fa-face-smile"></i></button>
+                        <button class="input-tool"><i class="fa-solid fa-gift"></i></button>
+                        <button class="input-tool"><i class="fa-solid fa-microphone"></i></button>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="messageInput" placeholder="Type your message...">
+                        <button class="send-btn" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav" id="mobileBottomNav">
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore</span>
+        </a>
+        <button class="mobile-create-btn" id="mobileCreateBtn">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+        <a href="#" class="mobile-nav-link active">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Chat</span>
+        </a>
+        <a href="#" class="mobile-nav-link">
+            <i class="fa-regular fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script>
+        // ===== MOBILE MENU =====
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const leftSidebar = document.getElementById('leftSidebar');
+        const topNavbar = document.getElementById('topNavbar');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            leftSidebar.classList.toggle('mobile-open');
+            mobileMenuToggle.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (leftSidebar.classList.contains('mobile-open') && 
+                !leftSidebar.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                leftSidebar.classList.remove('mobile-open');
+                mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+
+        // ===== PROFILE DROPDOWN =====
+        const navProfile = document.querySelector('.nav-profile');
+        navProfile.addEventListener('click', () => {
+            navProfile.classList.toggle('dropdown-open');
+        });
+        document.addEventListener('click', (e) => {
+            if (!navProfile.contains(e.target)) {
+                navProfile.classList.remove('dropdown-open');
+            }
+        });
+
+        // ===== NAVBAR SCROLL =====
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 100) {
+                topNavbar.classList.add('scrolled');
+            } else {
+                topNavbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // ===== MOOD TRACKER =====
+        document.querySelectorAll('.mood-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // ===== CONVERSATION SWITCHING =====
+        const convItems = document.querySelectorAll('.conv-item');
+        const chatPanel = document.getElementById('chatPanel');
+        const conversationsPanel = document.getElementById('conversationsPanel');
+        const chatBackBtn = document.getElementById('chatBackBtn');
+
+        convItems.forEach(item => {
+            item.addEventListener('click', () => {
+                convItems.forEach(c => c.classList.remove('active'));
+                item.classList.add('active');
+
+                // Update chat header
+                const name = item.querySelector('.conv-name').innerHTML;
+                const avatar = item.querySelector('.conv-avatar').src;
+                const status = item.querySelector('.conv-status').classList.contains('online') ? 'online' : 
+                               item.querySelector('.conv-status').classList.contains('away') ? 'away' : 'offline';
+                const statusText = status === 'online' ? 'Active now' : status === 'away' ? 'Away' : 'Offline';
+
+                document.querySelector('.chat-header-name').innerHTML = name;
+                document.querySelector('.chat-header-avatar img').src = avatar;
+                document.querySelector('.chat-header-status').className = `chat-header-status ${status}`;
+                document.querySelector('.chat-header-status-text').textContent = statusText;
+
+                // On mobile, show chat panel
+                if (window.innerWidth <= 768) {
+                    chatPanel.classList.add('mobile-active');
+                }
+
+                // Remove unread badge
+                const unread = item.querySelector('.conv-unread');
+                if (unread) unread.remove();
+            });
+        });
+
+        // Mobile back button
+        chatBackBtn.addEventListener('click', () => {
+            chatPanel.classList.remove('mobile-active');
+        });
+
+        // ===== SEND MESSAGE =====
+        const messageInput = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const messagesArea = document.getElementById('messagesArea');
+
+        function sendMessage() {
+            const text = messageInput.value.trim();
+            if (!text) return;
+
+            // Remove typing indicator
+            const typingRow = messagesArea.querySelector('.typing-row');
+            if (typingRow) typingRow.remove();
+
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+            const msgRow = document.createElement('div');
+            msgRow.className = 'msg-row sent';
+            msgRow.innerHTML = `
+                <div class="msg-bubble">
+                    <p class="msg-text">${text}</p>
+                    <span class="msg-time">${timeStr} <i class="fa-solid fa-check"></i></span>
+                </div>
+            `;
+            messagesArea.appendChild(msgRow);
+            messageInput.value = '';
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+
+            // Simulate read receipt after 1s
+            setTimeout(() => {
+                const check = msgRow.querySelector('.fa-check');
+                if (check) check.className = 'fa-solid fa-check-double read';
+            }, 1000);
+
+            // Simulate reply after 2s
+            setTimeout(() => {
+                const replies = [
+                    "Yesss exactly!!",
+                    "I'm so glad you agree!",
+                    "We need to do a glow-up session together soon",
+                    "Sending you all the good vibes!!",
+                    "This is why you're my favorite person to chat with"
+                ];
+                const reply = replies[Math.floor(Math.random() * replies.length)];
+
+                const replyRow = document.createElement('div');
+                replyRow.className = 'msg-row received';
+                replyRow.innerHTML = `
+                    <img src="${document.querySelector('.chat-header-avatar img').src}" alt="" class="msg-avatar">
+                    <div class="msg-bubble">
+                        <p class="msg-text">${reply}</p>
+                        <span class="msg-time">${new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</span>
+                    </div>
+                `;
+                messagesArea.appendChild(replyRow);
+                messagesArea.scrollTop = messagesArea.scrollHeight;
+            }, 2000);
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Scroll to bottom on load
+        messagesArea.scrollTop = messagesArea.scrollHeight;
+
+        // ===== FILTER TABS =====
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
